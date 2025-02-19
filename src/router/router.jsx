@@ -47,6 +47,7 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfilePage />,
+      },
     ],
   },
   {
@@ -70,7 +71,7 @@ const router = createBrowserRouter([
         element: <AuthPersonalInfo />,
       },
       {
-        path: "organazition-info",
+        path: "organazition-info", 
         element: <AuthOrganizationInfo />,
       },
       {
