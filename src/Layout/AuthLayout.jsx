@@ -19,9 +19,9 @@ const AuthLayout = () => {
       )}
 
       {!["/auth/interest"].includes(pathName) ? (
-        <div className="flex flex-row gap-x-[60px] items-center">
+        <div className="flex flex-row gap-x-[30px] 2xl:gap-x-[60px] items-center">
           <AuthLeftSvg />
-          <div className="mt-10" >
+          <div className="mt-10 px-5 xl:px-0 ">
             <Outlet />
           </div>
         </div>
@@ -33,3 +33,4 @@ const AuthLayout = () => {
 };
 
 export default AuthLayout;
+
