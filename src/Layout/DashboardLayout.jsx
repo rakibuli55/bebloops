@@ -12,7 +12,7 @@ const DashboardLayout = () => {
          <div>
            <Sidebar />
          </div>
-         <div className='app-component min-h-screen max-h-screen pl-[365px] pr-[345px] pt-[137px]'>
+         <div className='app-component min-h-screen max-h-screen pl-[365px] pr-[345px] pt-[114px]'>
           <Outlet />
          </div>
          <div>

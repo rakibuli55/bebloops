@@ -16,36 +16,26 @@ const initialComments = [
         author: "Sania Amal",
         text: "Thank you so much. ❤️",
         time: "2 days ago",
-        replies: [
-          {
-            id: uuidv4(),
-            author: "Sania Amal",
-            text: "miss u. ❤️",
-            time: "2 days ago",
-            replies: [
-              {
-                id: uuidv4(),
-                author: "Sania Amal",
-                text: "love you. ❤️",
-                time: "2 days ago",
-                replies: [],
-              },
-            ],
-          },
-        ],
       },
     ],
   },
   {
     id: uuidv4(),
-    author: "Tariqul Islam",
+    author: "Rakibul Islam",
     text: "An excellent chance to boost speaking skills, & confidence!",
     time: "2 days ago",
-    replies: [],
+    replies: [
+      {
+        id: uuidv4(),
+        author: "Neha Natal",
+        text: "good.",
+        time: "2 days ago",
+      },
+    ],
   },
   {
     id: uuidv4(),
-    author: "Tariqul Islam",
+    author: "Nehal Chowdhury",
     text: "An excellent chance to boost speaking skills, & confidence!",
     time: "2 days ago",
     replies: [],
@@ -55,77 +45,89 @@ const initialComments = [
 const CommentSection = () => {
   const [comments, setComments] = useState(initialComments);
   const [newComment, setNewComment] = useState("");
-  const commentBoxRef = useRef(null);
+  const commentsEndRef = useRef(null);
 
-  const getAllReplies = (commentList) => {
-    let allReplies = [];
+  // Function to scroll to bottom
+  const scrollToBottom = () => {
+    commentsEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
-    const collectReplies = (comments) => {
-      comments.forEach((comment) => {
-        if (comment.replies.length > 0) {
-          allReplies.push(...comment.replies);
-          collectReplies(comment.replies);
-        }
-      });
+  // AddComment
+  const handleAddComment = (commentText) => {
+    if (!commentText.trim()) return;
+    const newComment = {
+      id: uuidv4(),
+      author: "User",
+      text: commentText,
+      time: "just now",
+      replies: [],
     };
 
-    collectReplies(comments);
-    return allReplies;
-
-  }
-  // addComment
-  const addComment = () => {
-    if (!newComment.trim()) return;
-
-    setComments([
-      ...comments,
-      {
-        id: uuidv4(),
-        author: "User",
-        text: newComment,
-        time: "Just now",
-        replies: [],
-      },
-    ]);
+    setComments([...comments, newComment]);
     setNewComment("");
+    setTimeout(scrollToBottom, 100);
   };
 
-  const addReplay = (parentId, replyText) => {
-    const updateComments = (commentsList) =>
-      commentsList.map((comment) =>
-        comment.id === parentId
-          ? {
-              ...comment,
-              replies: [
-                ...comment.replies,
-                {
-                  id: uuidv4(),
-                  author: "author",
-                  text: replyText,
-                  time: "just now",
-                  replies: [],
-                },
-              ],
-            }
-          : {
-              ...comment,
-              replies: updateComments(comment.replies),
-            }
-      );
+  // add reply
+  const handleAddReply = (replyText, parentId) => {
+    if (!replyText.trim()) return;
 
-    setComments(updateComments(comments));
+    const updatedComment = comments.map((comment) => {
+      if (comment.id === parentId) {
+        return {
+          ...comment,
+          replies: [
+            ...comment.replies,
+            {
+              id: uuidv4(),
+              author: "User",
+              text: replyText,
+              time: "just now",
+            },
+          ],
+        };
+      } else {
+        return comment;
+      }
+    });
+
+    setComments(updatedComment);
   };
+
+  const handleDelete = (commentId, replyId=null) => {
+    if(replyId){
+      const updatedComments = comments.map((comment) => {
+        if(comment.id === commentId){
+          return {
+            ...comment,
+            replies:comment.replies.filter((reply) => reply.id !== replyId)
+          }
+        }
+        return comment;
+      });
+      setComments(updatedComments);
+    }else{
+      setComments(comments.filter((comment) => comment.id !== commentId));
+    }
+  }
 
   return (
-    <div className="py-6 px-5 bg-white rounded-tl-[16px] rounded-tr-[16px] min-h-[695px]">
+    <div className="py-6 pl-5 pr-2 bg-white rounded-tl-[16px] rounded-tr-[16px] min-h-[695px]">
       <h3 className="text-lg font-semibold mb-6">
         {comments?.length} Comments
       </h3>
       {/* comments  */}
-      <div className="comments-area h-[530px] overflow-y-auto" ref={commentBoxRef}>
-        {comments?.map((comment) => (
-          <Comment key={comment?.id} comment={comment} addReplay={addReplay} />
+      <div className="comments-area h-[530px] overflow-y-auto pr-3">
+        {comments.map((comment) => (
+          <Comment
+            key={comment?.id}
+            comment={comment}
+            parentId={comment.id}
+            onAddReply={handleAddReply}
+            onDelete={handleDelete}
+          />
         ))}
+        <div ref={commentsEndRef} />
       </div>
       {/* add comment  */}
       <div className="mt-4 flex justify-end gap-4">
@@ -141,9 +143,11 @@ const CommentSection = () => {
             onChange={(e) => setNewComment(e.target.value)}
             placeholder="Add a comment..."
           />
+          {/* add a new comment button  */}
           <button
             className="absolute bottom-[10px] right-0 h-8 w-8 bg-primaryColor flex items-center justify-center rounded-full text-white"
-            onClick={addComment}
+            onClick={() => handleAddComment(newComment)}
+            onChange={(e) => setNewComment(e.target.value)}
           >
             <BsFillSendFill />
           </button>
