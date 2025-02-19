@@ -274,7 +274,7 @@ const JoinedhalfIndex = Math.ceil(JoinedMovementData.length / 2)
 
 const MovementPage = () => {
   return (
-    <section className="movement-section">
+    <section className="movement-section pt-6">
         <Tabs defaultValue="my-movement" className="w-[full]">
             {/* header  */}
             <div className="flex items-center justify-between">

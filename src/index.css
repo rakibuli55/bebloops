@@ -91,5 +91,10 @@
   .form-input {
     @apply w-[344px] h-auto py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3 text-base font-normal leading-[24px] text-secondaryGray ;
   }
-  /* input design ended here */
+  .profile-tabs-buttons button{
+    @apply !py-[14px] !px-5 flex items-center gap-[14px] text-base font-medium text-[#4D4D4D] bg-[#F6F6F6] rounded-[8px] block w-full mt-5 justify-start;
+  }
+  .profile-tabs-buttons button[data-state="active"] {
+    @apply bg-primaryColor text-white;
+  }
 }
