@@ -1,6 +1,7 @@
 import AuthButton from "@/components/Buttons/AuthButton/AuthButton";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const AuthForgetPass = () => {
   const {
@@ -9,10 +10,13 @@ const AuthForgetPass = () => {
     formState: { errors },
   } = useForm();
 
+  const navigate = useNavigate();
+
   // Handle form submission
   const onSubmit = data => {
     console.log("Form Submitted:", data);
     // Perform actions like API requests
+    navigate("/auth/otp-verify");
   };
   return (
     <form

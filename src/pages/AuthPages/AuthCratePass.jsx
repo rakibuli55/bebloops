@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 
 const AuthCratePass = () => {
   const {
@@ -12,11 +14,14 @@ const AuthCratePass = () => {
     formState: { errors },
   } = useForm();
 
+  const navigate = useNavigate()
+
   // Watch the password field to validate confirm password
   const password = watch("password");
 
   const onSubmit = data => {
     console.log("Form Submitted:", data);
+    navigate("/auth/choose-profile-pic");
   };
 
   const [isPass, setIspass] = useState(true);

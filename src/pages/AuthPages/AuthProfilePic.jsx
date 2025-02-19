@@ -2,10 +2,14 @@ import AuthButton from "@/components/Buttons/AuthButton/AuthButton";
 import { avatarArr } from "@/components/DummyData/DummyData";
 import { Cross } from "@/components/Svg/Svg";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AuthProfilePic = () => {
   const [file, setfile] = useState();
   const [Imgurl, setImgurl] = useState();
+
+  const navigate = useNavigate();
 
   const handleFileUpload = e => {
     const file = e.target.files[0];
@@ -16,6 +20,16 @@ const AuthProfilePic = () => {
       if (imageUrl) {
         setImgurl(imageUrl);
       }
+    }
+  };
+
+  const handleProfileUpload = e => {
+    e.preventDefault();
+    if (!file && !Imgurl) {
+      toast.error("Upload a Profile picture or select a avatar");
+      return;
+    } else {
+      navigate("/auth/interest");
     }
   };
 
@@ -73,7 +87,13 @@ const AuthProfilePic = () => {
           </div>
         </div>
       </div>
-      <AuthButton Type="submit" Text="Continue" />
+      <AuthButton
+        onClick={e => {
+          handleProfileUpload(e);
+        }}
+        Type="submit"
+        Text="Continue"
+      />
     </form>
   );
 };

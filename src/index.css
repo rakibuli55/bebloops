@@ -7,6 +7,7 @@
 @layer base {
   body {
     @apply font-montserrat bg-defaultBg;
+    overflow-x: hidden;
   }
   :root {
     --radius: 0.5rem;
@@ -79,7 +80,7 @@
 
   /* heading and paragraph styles started here */
   .common-para-one {
-    @apply text-[16px] font-medium leading-[150%] text-defaultGray;
+    @apply text-[11px] xs:text-[14px] xl:text-[16px] font-medium leading-[150%] text-defaultGray;
   }
 
   .common-form-heading {
