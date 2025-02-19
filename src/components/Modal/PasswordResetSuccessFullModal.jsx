@@ -48,3 +48,5 @@ const PasswordResetSuccessFullModal = ({ isOpen, onClose }) => {
 };
 
 export default PasswordResetSuccessFullModal;
+
+// issue fixed
