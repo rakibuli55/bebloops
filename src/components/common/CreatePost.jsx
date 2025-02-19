@@ -100,7 +100,7 @@ const CreatePost = () => {
       <DialogTrigger className="w-full">
       <div className="flex items-center gap-3 py-[18px] px-[22px] bg-primaryColor rounded-[8px] cursor-pointer duration-200 hover:bg-[#4b51ef]">
           <p className="text-[20px] text-white"><FaRegEdit /></p>
-          <p className="text-base font-semibold text-white">Create a Post</p>
+          <p className="text-base font-semibold text-white">Create a Movement</p>
       </div>
       </DialogTrigger>
       <DialogContent className="max-w-[682px] max-h-[720px] overflow-y-auto rounded-[12px] bg-[#F8F8F8]">

@@ -16,7 +16,7 @@ const MyJoinedMovementCard = ({item, name}) => {
       }
 
   return (
-    <Link to={'/'} className="flex items-center justify-between border p-[10px] rounded-[6px] border-[#F6F6F6]">
+    <Link to={'/movement/1'} className="flex items-center justify-between border p-[10px] rounded-[6px] border-[#F6F6F6]">
       <div className="flex items-start gap-4">
             <img className="w-[70px] min-w-[70px] h-[70px] object-cover" src={item?.img} alt="" />
             <div>
