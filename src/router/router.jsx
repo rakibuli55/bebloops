@@ -13,7 +13,9 @@ import AuthOrganizationInfo from "@/pages/AuthPages/AuthOrganizationInfo";
 import AuthCratePass from "@/pages/AuthPages/AuthCratePass";
 import AuthProfilePic from "@/pages/AuthPages/AuthProfilePic";
 import AuthInterest from "@/pages/AuthPages/AuthInterest";
-
+import AuthForgetPass from "@/pages/AuthPages/AuthForgetPass";
+import AuthOtpVerify from "@/pages/AuthPages/AuthOtpVerify";
+import AuthResetPass from "@/pages/AuthPages/AuthResetPass";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +75,18 @@ const router = createBrowserRouter([
       {
         path: "interest",
         element: <AuthInterest />,
+      },
+      {
+        path: "forgot-pass",
+        element: <AuthForgetPass />,
+      },
+      {
+        path: "otp-verify",
+        element: <AuthOtpVerify />,
+      },
+      {
+        path: "reset-pass",
+        element: <AuthResetPass />,
       },
     ],
   },

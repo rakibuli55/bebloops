@@ -166,3 +166,33 @@ export const SearchIcon = () => {
     </svg>
   );
 };
+
+export const RightIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="17"
+      viewBox="0 0 16 17"
+      fill="none"
+    >
+      <g clip-path="url(#clip0_19974_17295)">
+        <path
+          d="M15.7657 3.102C15.4533 2.78957 14.9468 2.78957 14.6343 3.102L5.04983 12.6866L1.3657 9.00247C1.0533 8.69004 0.546797 8.69007 0.234328 9.00247C-0.0781094 9.31488 -0.0781094 9.82138 0.234328 10.1338L4.48414 14.3836C4.79645 14.696 5.30333 14.6958 5.61552 14.3836L15.7657 4.23338C16.0781 3.92097 16.0781 3.41444 15.7657 3.102Z"
+          fill="#696EFF"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_19974_17295">
+          <rect
+            width="16"
+            height="16"
+            fill="white"
+            transform="translate(0 0.742676)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+

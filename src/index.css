@@ -89,7 +89,7 @@
 
   /* input design started here */
   .form-input {
-    @apply w-[320px] h-auto py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3 text-base font-normal leading-[24px] text-secondaryGray ;
+    @apply w-[344px] h-auto py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3 text-base font-normal leading-[24px] text-secondaryGray ;
   }
   /* input design ended here */
 }
