@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -42,39 +42,54 @@
   ::-webkit-scrollbar-thumb {
     @apply bg-[#cecece] rounded-[10px];
   }
-  header .profile-dropdown{
+  header .profile-dropdown {
     @apply absolute right-0 w-[220px] bg-white shadow-lg rounded-[8px] py-4;
   }
-  header .profile-dropdown li a{
+  header .profile-dropdown li a {
     @apply block px-6 py-2 text-base font-medium duration-200 ease-in-out hover:bg-primaryLight hover:text-primaryColor;
   }
   .engagement-option:hover p {
-    @apply text-primaryColor
+    @apply text-primaryColor;
   }
-  .post-card:hover .media button{
+  .post-card:hover .media button {
     @apply opacity-100;
   }
-  .tab-button{
+  .tab-button {
     @apply !p-0 !text-[20px] !text-themeBlack !relative !bg-transparent !shadow-none;
   }
-  .tab-button:before{
-    content:'';
+  .tab-button:before {
+    content: "";
     @apply absolute bottom-[-8px] left-1/2 translate-x-[-50%] h-[2px] w-20 bg-primaryColor duration-200 ease-in-out opacity-0;
   }
-  .tab-button[data-state="active"]:before{
+  .tab-button[data-state="active"]:before {
     @apply opacity-100;
   }
-  .tab-button[data-state="active"]{
+  .tab-button[data-state="active"] {
     @apply !text-primaryColor;
   }
-  .post-input{
+  .post-input {
     @apply py-3 px-[10px] border border-[#DADADA] rounded-[6px] text-themeBlack focus:outline-none w-full text-sm;
   }
-  .post-label{
+  .post-label {
     @apply text-sm text-themeBlack pb-2 inline-block font-medium;
   }
-  .post-select button{
-    @apply !py-3
+  .post-select button {
+    @apply !py-3;
+  }
+
+  /* heading and paragraph styles started here */
+  .common-para-one {
+    @apply text-[16px] font-medium leading-[150%] text-defaultGray;
+  }
+
+  .common-form-heading {
+    @apply text-darkBlack leading-[150%] font-semibold text-xl;
+  }
+  /* heading and paragraph styles ended here */
+
+  /* input design started here */
+  .form-input {
+    @apply w-[344px] h-auto py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3 text-base font-normal leading-[24px] text-secondaryGray ;
   }
   .profile-tabs-buttons button{
     @apply !py-[14px] !px-5 flex items-center gap-[14px] text-base font-medium text-[#4D4D4D] bg-[#F6F6F6] rounded-[8px] block w-full mt-5 justify-start;
