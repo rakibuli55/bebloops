@@ -5,6 +5,7 @@ import SiteLogo from "../../assets/images/logo/logo.svg";
 import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 const AuthLogin = () => {
   const [isPass, setIspass] = useState(true);
@@ -15,10 +16,13 @@ const AuthLogin = () => {
     formState: { errors },
   } = useForm();
 
+  const navigate = useNavigate();
+
   // Handle form submission
   const onSubmit = data => {
     console.log("Form Submitted:", data);
     // Perform actions like API requests
+    navigate("/home");
   };
   return (
     <form
@@ -107,9 +111,12 @@ const AuthLogin = () => {
                 )}
               </div>
             </div>
-            <span className="text-[#696EFF] text-[14px] w-full text-end leading-[150%] font-medium cursor-pointer ">
+            <Link
+              to={"/auth/forgot-pass"}
+              className="text-[#696EFF] text-[14px] w-full text-end leading-[150%] font-medium cursor-pointer "
+            >
               Forgot Password?
-            </span>
+            </Link>
           </div>
         </div>
 
@@ -131,9 +138,12 @@ const AuthLogin = () => {
           </div>
           <h4 className=" text-defaultGray  font-medium font-Urbanist leading-[160%] ">
             Don’t have an account?{" "}
-            <span className="font-montserrat text-primaryGreen leading-[150%] cursor-pointer ">
+            <Link
+              to={"/auth/personal-info"}
+              className="font-montserrat text-primaryGreen leading-[150%] cursor-pointer "
+            >
               Register Now
-            </span>{" "}
+            </Link>{" "}
           </h4>
         </div>
       </div>

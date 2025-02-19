@@ -2,8 +2,10 @@ import React from "react";
 import SiteLogo from "../../assets/images/logo/logo.svg";
 import AuthButton from "@/components/Buttons/AuthButton/AuthButton";
 import { AppleLogo, GoogleLogo } from "@/components/Svg/Svg";
+import { Link, useNavigate } from "react-router-dom";
 
 const AuthHome = () => {
+  const navigate = useNavigate();
   return (
     <form className="flex flex-col h-auto w-auto p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] ">
       <div className="my-[60px] flex flex-col gap-y-[53px] items-center ">
@@ -30,13 +32,23 @@ const AuthHome = () => {
                   Sign In Using Apple Account
                 </span>
               </div>
-              <AuthButton Type={"submit"} Text={"Sign in with another email"} />
+              <AuthButton
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/auth/user-selection");
+                }}
+                Type={"submit"}
+                Text={"Sign in with another email"}
+              />
             </div>
             <h4 className=" text-defaultGray  font-medium font-Urbanist leading-[160%] ">
-              New To Bebloops?{" "}
-              <span className="font-montserrat text-primaryGreen leading-[150%] cursor-pointer ">
-                Register Now
-              </span>{" "}
+              Already have a account?{" "}
+              <Link
+                to={"/auth/login"}
+                className="font-montserrat text-primaryGreen leading-[150%] cursor-pointer "
+              >
+                Login
+              </Link>{" "}
             </h4>
           </div>
         </div>
@@ -46,4 +58,3 @@ const AuthHome = () => {
 };
 
 export default AuthHome;
-

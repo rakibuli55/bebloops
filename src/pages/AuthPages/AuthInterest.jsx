@@ -8,10 +8,12 @@ import {
 } from "@/components/Svg/Svg";
 import * as Accordion from "@radix-ui/react-accordion"; // Correct import
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const AuthInterest = () => {
   const [selctedValue, setselctedValue] = useState([]);
-  const [step, setstep] = useState(2);
+  const [step, setstep] = useState(1);
   const options = [
     "Art & Culture",
     "Learn",
@@ -20,6 +22,8 @@ const AuthInterest = () => {
     "Health & Wellbeing",
     "Craft",
   ];
+
+  const navigate = useNavigate()
 
   // State to manage the default open item
   const [openItem, setOpenItem] = useState("item-0");
@@ -144,7 +148,15 @@ const AuthInterest = () => {
           })}
         </div>
       )}
-      <AuthButton CustomWidth={true} Text={"Next"} />
+      <AuthButton onClick={(e) => {
+        e.preventDefault();
+        if (step === 1) {
+          setstep(2)
+        } else if(step === 2) {
+          navigate('/home')
+          setstep(1)
+        }
+      }} CustomWidth={true} Text={"Next"} />
     </section>
   );
 };

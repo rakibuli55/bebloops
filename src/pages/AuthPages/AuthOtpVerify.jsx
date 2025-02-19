@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import AuthButton from "@/components/Buttons/AuthButton/AuthButton";
+import { useNavigate } from "react-router-dom";
 
 const AuthOtpVerify = () => {
   const { control, handleSubmit, setValue, getValues } = useForm({
@@ -11,6 +12,8 @@ const AuthOtpVerify = () => {
       otpFour: "",
     },
   });
+
+  const navigate = useNavigate();
 
   const [error, setError] = useState("");
 
@@ -69,6 +72,8 @@ const AuthOtpVerify = () => {
     if (otpValues.some(value => value === "")) {
       setError("Please enter all four digits of the OTP.");
       return;
+    } else {
+      navigate("/auth/reset-pass");
     }
 
     const otpCode = otpValues.join("");

@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import SiteLogo from "../../assets/images/logo/logo.svg";
 import AuthButton from "@/components/Buttons/AuthButton/AuthButton";
+import { useNavigate } from "react-router-dom";
 
 const AuthOrganizationInfo = () => {
   // Initialize react-hook-form
@@ -9,11 +9,15 @@ const AuthOrganizationInfo = () => {
     register,
     handleSubmit,
     formState: { errors },
+    clearErrors,
   } = useForm();
+
+  const navigate = useNavigate();
 
   // Handle form submission
   const onSubmit = data => {
     console.log("Form Submitted:", data);
+    navigate("/auth/create-pass");
   };
 
   return (
@@ -21,63 +25,83 @@ const AuthOrganizationInfo = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col h-auto w-auto p-10 border-[1px] gap-y-6 items-center border-solid bg-white border-[#BDBDBD] rounded-[10px]"
     >
-      <h4 className="common-form-heading"> Organization Information</h4>
-      <div className="flex flex-col gap-y-10 ">
-        <div className="flex flex-col gap-y-4 ">
+      <h4 className="common-form-heading">Organization Information</h4>
+      <div className="flex flex-col gap-y-10">
+        <div className="flex flex-col gap-y-4">
           {/* Organization Name */}
           <div className="flex flex-col gap-y-2">
-            <label htmlFor="name" className="common-form-heading text-[14px]">
+            <label
+              htmlFor="name"
+              className={`common-form-heading text-[14px] ${
+                errors.name ? "text-red-500" : ""
+              }`}
+            >
               Organization Name
             </label>
             <input
-              placeholder="Enter your organization name"
+              placeholder={
+                errors.name
+                  ? errors.name.message
+                  : "Enter your organization name"
+              }
               id="name"
-              name="name"
               type="text"
-              className="form-input"
+              className={`form-input ${
+                errors.name ? "border-red-500 placeholder-red-500" : ""
+              }`}
               {...register("name", {
                 required: "Organization name is required",
+                onChange: () => clearErrors("name"),
               })}
             />
-            {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name.message}</p>
-            )}
+
           </div>
 
           {/* CIF */}
           <div className="flex flex-col gap-y-2">
-            <label htmlFor="cif" className="common-form-heading text-[14px]">
+            <label
+              htmlFor="cif"
+              className={`common-form-heading text-[14px] ${
+                errors.cif ? "text-red-500" : ""
+              }`}
+            >
               CIF
             </label>
             <input
-              placeholder="Enter your CIF info"
+              placeholder={
+                errors.cif ? errors.cif.message : "Enter your CIF info"
+              }
               id="cif"
-              name="cif"
               type="text"
-              className="form-input"
-              {...register("cif", { required: "CIF is required" })}
+              className={`form-input ${
+                errors.cif ? "border-red-500 placeholder-red-500" : ""
+              }`}
+              {...register("cif", {
+                required: "CIF is required",
+                onChange: () => clearErrors("cif"),
+              })}
             />
-            {errors.cif && (
-              <p className="text-red-500 text-sm">{errors.cif.message}</p>
-            )}
+            
           </div>
 
           {/* Country Dropdown */}
           <div className="flex flex-col gap-y-2">
             <label
               htmlFor="country"
-              className="common-form-heading text-[14px]"
+              className={`common-form-heading text-[14px] ${
+                errors.country ? "text-red-500" : ""
+              }`}
             >
               Country
             </label>
             <select
-              className="form-input"
-              name="country"
+              className={`form-input ${errors.country ? "border-red-500" : ""}`}
               id="country"
               {...register("country", {
-                required: "Country is required", // Validation message
+                required: "Country is required",
+                onChange: () => clearErrors("country"),
               })}
-              defaultValue="" // Ensures no option is selected by default
+              defaultValue=""
             >
               <option value="" disabled>
                 Select your country
@@ -86,48 +110,69 @@ const AuthOrganizationInfo = () => {
               <option value="canada">Canada</option>
               <option value="other">Other</option>
             </select>
-            {errors.country && (
-              <p className="text-red-500 text-sm">{errors.country.message}</p>
-            )}
+            
           </div>
 
           {/* Email */}
           <div className="flex flex-col gap-y-2">
-            <label htmlFor="email" className="common-form-heading text-[14px]">
+            <label
+              htmlFor="email"
+              className={`common-form-heading text-[14px] ${
+                errors.email ? "text-red-500" : ""
+              }`}
+            >
               Email
             </label>
             <input
-              placeholder="Enter your organization email"
+              placeholder={
+                errors.email
+                  ? errors.email.message
+                  : "Enter your organization email"
+              }
               id="email"
-              name="email"
               type="email"
-              className="form-input"
-              {...register("email", { required: "Email is required" })}
+              className={`form-input ${
+                errors.email ? "border-red-500 placeholder-red-500" : ""
+              }`}
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^[^@ ]+@[^@ ]+\.[^@ ]+$/,
+                  message: "Invalid email address",
+                },
+                onChange: () => clearErrors("email"),
+              })}
             />
-            {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email.message}</p>
-            )}
+           
           </div>
 
           {/* Website */}
           <div className="flex flex-col gap-y-2">
             <label
               htmlFor="website"
-              className="common-form-heading text-[14px]"
+              className={`common-form-heading text-[14px] ${
+                errors.website ? "text-red-500" : ""
+              }`}
             >
               Website
             </label>
             <input
-              placeholder="Enter your organization website"
+              placeholder={
+                errors.website
+                  ? errors.website.message
+                  : "Enter your organization website"
+              }
               id="website"
-              name="website"
               type="text"
-              className="form-input"
-              {...register("website", { required: "Website is required" })}
+              className={`form-input ${
+                errors.website ? "border-red-500 placeholder-red-500" : ""
+              }`}
+              {...register("website", {
+                required: "Website is required",
+                onChange: () => clearErrors("website"),
+              })}
             />
-            {errors.website && (
-              <p className="text-red-500 text-sm">{errors.website.message}</p>
-            )}
+            
           </div>
         </div>
         <AuthButton Type="submit" Text="Continue" />
