@@ -23,7 +23,8 @@ export default {
   			defaultGray: '#5C5C5C',
   			primaryGreen: '#469A4C',
   			darkBlack: '#1E1E1E',
-  			secondaryGray: '#BCBCBC'
+				secondaryGray: '#BCBCBC',
+				overlayBlack:'rgba(9, 9, 9, 0.78)'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

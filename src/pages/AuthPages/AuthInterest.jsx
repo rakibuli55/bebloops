@@ -1,4 +1,5 @@
 import AuthButton from "@/components/Buttons/AuthButton/AuthButton";
+import JoinCard from "@/components/Cards/JoinCard";
 import {
   AccordionCancel,
   AccordionCross,
@@ -59,7 +60,7 @@ const AuthInterest = () => {
             <h2 className="common-form-heading font-bold text-2xl   ">
               Find a movement to join now
             </h2>
-            <span className="common-para-one font-medium ">
+            <span className="common-para-one font-medium max-w-[388px] text-center ">
               Join movement to start and get suggestion what you to join
             </span>
           </div>
@@ -136,7 +137,13 @@ const AuthInterest = () => {
             ))}
           </Accordion.Root>
         </div>
-      ) : null}
+      ) : (
+        <div className="flex flex-row gap-6 mx-[100px] w-[1520px] h-[350px] overflow-y-scroll items-center justify-center flex-wrap ">
+          {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((item, index) => {
+            return <JoinCard key={index} />;
+          })}
+        </div>
+      )}
       <AuthButton CustomWidth={true} Text={"Next"} />
     </section>
   );
