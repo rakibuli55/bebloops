@@ -19,7 +19,7 @@ const AuthPersonalInfo = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col h-auto w-auto p-10 border-[1px] gap-y-6 items-center border-solid bg-white border-[#BDBDBD] rounded-[10px]"
+      className="flex flex-col my-20 lg:my-0 h-auto w-auto p-5 xl:p-10 border-[1px] gap-y-6 items-center border-solid bg-white border-[#BDBDBD] rounded-[10px]"
     >
       <h4 className="common-form-heading">Personal Information</h4>
       <div className="flex flex-col gap-y-10">

@@ -8,7 +8,7 @@ const JoinCard = () => {
   return (
     <div className="flex flex-col w-auto h-auto p-4 gap-y-4 relative bg-white rounded-[8px] border-[1px] border-solid border-[#BCBCBC]   ">
       <div
-        className="h-[130px] w-[269px] "
+        className="h-[130px] w-[220px] lg:w-[269px] "
         style={{
           backgroundImage: `url(${walking_man})`,
           backgroundSize: "cover",
@@ -19,7 +19,7 @@ const JoinCard = () => {
       <div className="flex flex-col gap-y-[26px] ">
         <div className="flex flex-col gap-y-[6px]">
           <div className="flex flex-col gap-y-2">
-            <h2 className="leading-[150%] font-medium text-[20px] text-[#333] ">
+            <h2 className="leading-[150%] font-medium text-[18px] lg:text-[20px] text-[#333] ">
               Health & Wellbeing{" "}
             </h2>
             <h4 className="leading-[150%] font-medium text-[14px] text-[#333] ">

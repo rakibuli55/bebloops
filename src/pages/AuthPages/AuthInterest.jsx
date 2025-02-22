@@ -10,7 +10,6 @@ import * as Accordion from "@radix-ui/react-accordion"; // Correct import
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 const AuthInterest = () => {
   const [selctedValue, setselctedValue] = useState([]);
   const [step, setstep] = useState(1);
@@ -23,19 +22,16 @@ const AuthInterest = () => {
     "Craft",
   ];
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   // State to manage the default open item
   const [openItem, setOpenItem] = useState("item-0");
 
   const handleSelection = value => {
     setselctedValue(prevState => {
-      // Check if the value is already selected
       if (prevState.includes(value)) {
-        // If it's already in the array, remove it (toggle functionality)
         return prevState.filter(item => item !== value);
       } else {
-        // Otherwise, add the new value
         return [...prevState, value];
       }
     });
@@ -44,12 +40,12 @@ const AuthInterest = () => {
   console.log(selctedValue);
 
   return (
-    <section className="pt-5 flex flex-col gap-y-10 items-center">
+    <section className="pt-5  px-5 xl:px-0 flex flex-col gap-y-5 xl:gap-y-10 items-center">
       {step === 1 ? (
-        <div className="flex flex-col gap-y-6 items-center ">
+        <div className="flex flex-col gap-y-3 xl:gap-y-6 items-center ">
           <h6 className="common-para-one">Step 1 of 2</h6>
-          <div className="flex flex-col gap-y-4 items-center ">
-            <h2 className="common-form-heading font-bold text-2xl   ">
+          <div className="flex flex-col gap-y-2 lg;gap-y-4 items-center ">
+            <h2 className="common-form-heading font-bold text-lg xl:text-2xl   ">
               Get started by picking a few interests
             </h2>
             <span className="common-para-one font-medium ">
@@ -71,7 +67,7 @@ const AuthInterest = () => {
         </div>
       )}
       {step === 1 ? (
-        <div className="flex flex-col gap-y-8 h-[400px] overflow-y-scroll py-4 px-5 ">
+        <div className="flex flex-col gap-y-8 h-[400px] overflow-y-scroll py-4 pr-5 ">
           <div className="relative w-full">
             <input
               placeholder="Search for more interest"
@@ -92,7 +88,7 @@ const AuthInterest = () => {
             {[0, 1, 2, 3].map((item, index) => (
               <Accordion.Item
                 key={index}
-                className="w-[600px] min-h-[50px] rounded-[8px] border-[1px] border-solid border-[#DADADA]"
+                className=" w-auto  lg:w-[600px] min-h-[50px] rounded-[8px] border-[1px] border-solid border-[#DADADA]"
                 value={`item-${index}`} // Set unique value for each item
               >
                 <Accordion.Header>
@@ -142,21 +138,26 @@ const AuthInterest = () => {
           </Accordion.Root>
         </div>
       ) : (
-        <div className="flex flex-row gap-6 mx-[100px] w-[1520px] h-[350px] overflow-y-scroll items-center justify-center flex-wrap ">
+        <div className="flex flex-row gap-6 mx-[100px] xl:w-[1520px] h-[350px] overflow-y-scroll items-center justify-center flex-wrap ">
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((item, index) => {
             return <JoinCard key={index} />;
           })}
         </div>
       )}
-      <AuthButton onClick={(e) => {
-        e.preventDefault();
-        if (step === 1) {
-          setstep(2)
-        } else if(step === 2) {
-          navigate('/home')
-          setstep(1)
-        }
-      }} CustomWidth={true} Text={"Next"} />
+
+      <AuthButton
+        onClick={e => {
+          e.preventDefault();
+          if (step === 1) {
+            setstep(2);
+          } else if (step === 2) {
+            navigate("/home");
+            setstep(1);
+          }
+        }}
+        CustomWidth={true}
+        Text={"Next"}
+      />
     </section>
   );
 };

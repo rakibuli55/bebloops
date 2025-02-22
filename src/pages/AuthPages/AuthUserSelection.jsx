@@ -15,7 +15,7 @@ const AuthUserSelection = () => {
   const navigate = useNavigate();
 
   return (
-    <form className="flex flex-col h-auto w-auto p-10 border-[1px] border-solid   bg-white border-[#BDBDBD] rounded-[10px] ">
+    <form className="flex flex-col items-center h-auto w-auto p-5 2xl:p-10   border-[1px] border-solid   bg-white border-[#BDBDBD] rounded-[10px] ">
       <div className="my-[60px] flex flex-col gap-y-[40px] items-center ">
         <img
           src={SiteLogo}
@@ -30,8 +30,8 @@ const AuthUserSelection = () => {
               positive change.
             </p>
           </div>
-          <div className="flex flex-col gap-y-8">
-            <div className="flex flex-col gap-y-4 w-[344px] ">
+          <div className="flex flex-col  gap-y-8">
+            <div className="flex flex-col w-full  gap-y-4  lg:w-[344px] ">
               <AuthButton
                 Text={"Join as an Individual"}
                 onClick={e => {
@@ -60,9 +60,9 @@ const AuthUserSelection = () => {
               <input
                 onChange={handleCheck}
                 type="checkbox"
-                className=" w-3 h-3 mb-5 "
+                className=" w-3 h-3 lg:mb-5 mb-10 "
               />
-              <p className="max-w-[340px] common-para-one text-[14px] ">
+              <p className="sm:max-w-[340px] common-para-one text-[14px] ">
                 I hereby confirm and accept the{" "}
                 <span className="text-primaryColor">Terms of Service</span> and
                 the <span className="text-primaryColor">Privacy Policy.</span>
