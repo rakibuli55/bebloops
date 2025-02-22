@@ -30,9 +30,9 @@ const PasswordResetSuccessFullModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div  className="fixed inset-0 z-50 bg-overlayBlack  flex justify-center items-center">
-      <div ref={modalRef} className="w-[511px] h-[498px] rounded-[61.5px] py-[46.1px] flex flex-col items-center justify-center gap-y-[19.46px]  bg-white ">
-        <img src={lock} alt="not found" />
+    <div  className="fixed inset-0 z-50 bg-overlayBlack   flex justify-center items-center">
+      <div ref={modalRef} className="xl:w-[511px]   xl:h-[498px] rounded-[30px] xl:rounded-[61.5px] py-[46.1px] flex flex-col items-center justify-center gap-y-[19.46px]  bg-white ">
+        <img src={lock} className="xl:w-[162px] w-[120px] h-[108px]  xl:h-[174px] object-contain xl:object-cover" alt="not found" />
         <h2 className="text-[#696EFF] text-[23.356px] font-medium leading-[150%] w-[188px] text-center ">
           Reset Password Successful !
         </h2>
@@ -40,13 +40,9 @@ const PasswordResetSuccessFullModal = ({ isOpen, onClose }) => {
           {" "}
           Please wait... You will be directed to the homepage soon.
         </p>
-
-        
       </div>
     </div>
   );
 };
 
 export default PasswordResetSuccessFullModal;
-
-// issue fixed
