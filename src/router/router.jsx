@@ -6,6 +6,7 @@ import MovementPage from "../pages/MovementPage";
 import MovementSinglePage from "../pages/MovementSinglePage";
 import PostDetailsPage from "../pages/PostDetailsPage";
 import ProfilePage from "../pages/ProfilePage";
+import ErrorPage from "@/pages/Error/ErrorPage";
 import AuthLayout from "@/Layout/AuthLayout";
 import AuthHome from "@/pages/AuthPages/AuthHome";
 import AuthLogin from "@/pages/AuthPages/AuthLogin";
@@ -18,8 +19,6 @@ import AuthInterest from "@/pages/AuthPages/AuthInterest";
 import AuthForgetPass from "@/pages/AuthPages/AuthForgetPass";
 import AuthOtpVerify from "@/pages/AuthPages/AuthOtpVerify";
 import AuthResetPass from "@/pages/AuthPages/AuthResetPass";
-import ErrorPage from "@/pages/Error/ErrorPage";
-
 
 const router = createBrowserRouter([
   {
