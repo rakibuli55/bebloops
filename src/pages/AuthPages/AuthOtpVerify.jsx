@@ -84,7 +84,7 @@ const AuthOtpVerify = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col h-auto w-auto p-10 border border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[20px]"
+      className="flex flex-col h-auto w-auto p-5 xl:p-10 border border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[20px]"
     >
       <div className="flex flex-col gap-y-4 items-center">
         <h2 className="common-form-heading text-[#333]">OTP Verification</h2>
@@ -94,7 +94,7 @@ const AuthOtpVerify = () => {
       </div>
 
       <div className="flex flex-col gap-y-4">
-        <div className="flex flex-row gap-x-5 w-full items-center">
+        <div className="flex flex-row gap-x-3 xl:gap-x-5 justify-center w-full items-center">
           {["otpOne", "otpTwo", "otpThree", "otpFour"].map(name => (
             <Controller
               key={name}
@@ -105,7 +105,7 @@ const AuthOtpVerify = () => {
                   {...field}
                   type="text"
                   maxLength={1}
-                  className="h-[60px] w-[70px] bg-[#E0E0E0] outline-none rounded-[8px] text-center text-xl font-semibold"
+                  className=" h-[40px] xl:h-[60px] w-[50px] xl:w-[70px] bg-[#E0E0E0] outline-none rounded-[8px] text-center text-xl font-semibold"
                   onChange={e => handleInputChange(e, name)}
                   onKeyDown={e => handleKeyDown(e, name)}
                   onPaste={handlePaste}

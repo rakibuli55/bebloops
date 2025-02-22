@@ -21,14 +21,14 @@ const AuthForgetPass = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col h-auto w-auto p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[18px]  "
+      className="flex flex-col h-auto w-auto p-5 lg:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[18px]  "
     >
-      <div className="flex flex-col gap-y-10">
+      <div className="flex flex-col gap-y-3 xl:gap-y-10">
         <div className="flex flex-col gap-y-4 items-center ">
           <h2 className="common-form-heading text-[#333] ">
             Forgot Your Password?
           </h2>
-          <p className="common-para-one  text-center max-w-[327px] h-[63px] font-normal ">
+          <p className="common-para-one  text-center max-w-[327px] h-[63px] lg:font-normal ">
             Please enter your registered & we sent an OTP Verification code to
             reset your password.
           </p>

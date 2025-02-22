@@ -135,7 +135,7 @@ const AuthLogin = () => {
             </div>
             <AuthButton Type={"submit"} Text={"Login"} />
           </div>
-          <h4 className=" text-defaultGray  font-medium font-Urbanist leading-[160%] ">
+          <h4 className=" text-defaultGray text-[14px] lg:text-base  font-medium font-Urbanist leading-[160%] ">
             Don’t have an account?{" "}
             <Link
               to={"/auth/personal-info"}

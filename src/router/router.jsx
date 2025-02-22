@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import DashboardLayout from "../Layout/DashboardLayout";
 import DonationPage from "../pages/DonationPage";
 import HomePage from "../pages/HomePage";
@@ -18,11 +18,14 @@ import AuthInterest from "@/pages/AuthPages/AuthInterest";
 import AuthForgetPass from "@/pages/AuthPages/AuthForgetPass";
 import AuthOtpVerify from "@/pages/AuthPages/AuthOtpVerify";
 import AuthResetPass from "@/pages/AuthPages/AuthResetPass";
+import ErrorPage from "@/pages/Error/ErrorPage";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <DashboardLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/home",
@@ -51,9 +54,13 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/auth",
+    path: "/auth/",
     element: <AuthLayout />,
     children: [
+      {
+        index: true, 
+        element: <Navigate to="home" replace />, 
+      },
       {
         path: "home",
         element: <AuthHome />,
@@ -71,7 +78,7 @@ const router = createBrowserRouter([
         element: <AuthPersonalInfo />,
       },
       {
-        path: "organazition-info", 
+        path: "organazition-info",
         element: <AuthOrganizationInfo />,
       },
       {

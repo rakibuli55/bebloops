@@ -80,7 +80,7 @@
 
   /* heading and paragraph styles started here */
   .common-para-one {
-    @apply text-[12px] xs:text-[14px] xl:text-[16px] font-medium leading-[150%] text-defaultGray;
+    @apply text-[11px] xs:text-[14px] xl:text-[16px] font-medium leading-[150%] text-defaultGray;
   }
 
   .common-form-heading {
@@ -96,6 +96,21 @@
     @apply !py-[14px] !px-5 flex items-center gap-[14px] text-base font-medium text-[#4D4D4D] bg-[#F6F6F6] rounded-[8px] block w-full mt-5 justify-start;
   }
   .profile-tabs-buttons button[data-state="active"] {
+    @apply bg-primaryColor text-white;
+  }
+  .dash-tab-content{
+    @apply h-[calc(100vh-227px)] overflow-y-auto;
+  }
+  .dash-post-card:hover img{
+    @apply scale-[1.1];
+  }
+  .language-feild input{
+    @apply hidden;
+  }
+  .language-feild label{
+    @apply flex items-center py-4 px-5 rounded-[6px] font-medium text-themeBlack bg-[#F6F6F6] mt-4 first:mt-0 cursor-pointer gap-[14px] duration-200 ease-in-out;
+  }
+  .language-feild input:checked + label {
     @apply bg-primaryColor text-white;
   }
 }

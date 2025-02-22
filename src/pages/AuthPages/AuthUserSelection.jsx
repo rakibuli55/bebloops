@@ -16,7 +16,7 @@ const AuthUserSelection = () => {
 
   return (
     <form className="flex flex-col items-center h-auto w-auto p-5 2xl:p-10   border-[1px] border-solid   bg-white border-[#BDBDBD] rounded-[10px] ">
-      <div className="my-[60px] flex flex-col gap-y-[40px] items-center ">
+      <div className=" my-[20px] xl:my-[60px] flex flex-col gap-y-[40px] items-center ">
         <img
           src={SiteLogo}
           className="w-[213px] h-[60px] object-cover cursor-default block "
@@ -31,7 +31,7 @@ const AuthUserSelection = () => {
             </p>
           </div>
           <div className="flex flex-col  gap-y-8">
-            <div className="flex flex-col w-full  gap-y-4  lg:w-[344px] ">
+            <div className="flex flex-col w-full  gap-y-4  xl:w-[344px] ">
               <AuthButton
                 Text={"Join as an Individual"}
                 onClick={e => {
