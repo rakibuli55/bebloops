@@ -82,4 +82,19 @@
   .profile-tabs-buttons button[data-state="active"] {
     @apply bg-primaryColor text-white;
   }
+  .dash-tab-content{
+    @apply h-[calc(100vh-227px)] overflow-y-auto;
+  }
+  .dash-post-card:hover img{
+    @apply scale-[1.1];
+  }
+  .language-feild input{
+    @apply hidden;
+  }
+  .language-feild label{
+    @apply flex items-center py-4 px-5 rounded-[6px] font-medium text-themeBlack bg-[#F6F6F6] mt-4 first:mt-0 cursor-pointer gap-[14px] duration-200 ease-in-out;
+  }
+  .language-feild input:checked + label {
+    @apply bg-primaryColor text-white;
+  }
 }
