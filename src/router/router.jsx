@@ -6,11 +6,13 @@ import MovementPage from "../pages/MovementPage";
 import MovementSinglePage from "../pages/MovementSinglePage";
 import PostDetailsPage from "../pages/PostDetailsPage";
 import ProfilePage from "../pages/ProfilePage";
+import ErrorPage from "@/pages/Error/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <DashboardLayout />,
+    errorElement:<ErrorPage />,
     children: [
       {
         path: "/home",
