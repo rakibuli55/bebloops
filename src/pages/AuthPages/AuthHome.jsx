@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 const AuthHome = () => {
   const navigate = useNavigate();
   return (
-    <form className="flex flex-col h-auto w-auto p-5 32xl:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] ">
+    <form className="flex flex-col h-auto w-auto p-5 2xl:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] ">
       <div className=" my-[15px] 2xl:my-[30px] 32xl:my-[60px] flex flex-col gap-y-[30px] 2xl:gap-y-[53px] items-center ">
         <img
           src={SiteLogo}

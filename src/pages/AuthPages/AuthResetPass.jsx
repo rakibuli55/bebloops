@@ -45,14 +45,14 @@ const AuthResetPass = () => {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col h-auto z-0 w-auto p-10 border-[1px]  border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[30px]"
+        className="flex flex-col h-auto z-0 w-auto p-5 xl:p-10 border-[1px]  border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[30px]"
       >
         <div className="flex flex-col gap-y-6 items-center">
           <div className="flex flex-col gap-y-4 max-w-[327px] items-center ">
-            <h4 className="common-form-heading text-2xl text-[#333] ">
+            <h4 className="common-form-heading text-xl lg:text-2xl text-[#333] ">
               Set a New Password
             </h4>
-            <p className="text-center">
+            <p className="text-center text-[14px] leading-[150%] font-normal text-[#5C5C5C]  ">
               Enter your email, and we'll send you a code to reset your
               password.
             </p>
