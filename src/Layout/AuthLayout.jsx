@@ -7,17 +7,7 @@ const AuthLayout = () => {
   const location = useLocation();
   const pathName = location.pathname;
   return (
-    <section className=" h-[100vh] w-[100vw] overflow-y-hidden pb-[50px] flex flex-col items-center justify-center   overflow-x-hidden   ">
-      {!["/auth/home", "/auth/user-selection"].includes(pathName) && (
-        <div className="w-full hidden xl:flex items-center justify-center ">
-          <img
-            src={logo}
-            className="w-[320px] mt-[50px] h-[90px] object-cover "
-            alt="not found"
-          />
-        </div>
-      )}
-
+    <section className=" h-[100vh] w-[100vw] overflow-y-scroll  pb-[50px] flex flex-col items-center justify-center   overflow-x-hidden   ">
       {!["/auth/interest"].includes(pathName) ? (
         <div className="flex flex-row gap-x-[30px] 2xl:gap-x-[60px] px-[10px] xl:px-0 items-center">
           <AuthLeftSvg />
