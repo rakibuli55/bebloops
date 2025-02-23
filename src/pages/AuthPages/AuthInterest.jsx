@@ -81,7 +81,7 @@ const AuthInterest = () => {
           <Accordion.Root
             type="single"
             collapsible
-            value={openItem} // Set default value to open a specific accordion item
+            value={openItem} 
             onValueChange={setOpenItem} // Update state on accordion item change
             className="flex flex-col gap-y-4"
           >

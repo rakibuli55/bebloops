@@ -7,7 +7,7 @@ const AuthLayout = () => {
   const location = useLocation();
   const pathName = location.pathname;
   return (
-    <section className=" h-[100vh] w-[100vw] overflow-y-scroll  pb-[50px] flex flex-col items-center justify-center   overflow-x-hidden   ">
+    <section className=" h-[100vh] w-[100vw] overflow-y-auto  pb-[50px] flex flex-col items-center justify-center   overflow-x-hidden   ">
       {!["/auth/interest"].includes(pathName) ? (
         <div className="flex flex-row gap-x-[30px] 2xl:gap-x-[60px] px-[10px] xl:px-0 items-center">
           <AuthLeftSvg />

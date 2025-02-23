@@ -27,7 +27,7 @@ const AuthLogin = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col h-auto w-auto p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] px-4 "
+      className="flex flex-col h-auto w-auto p-7  lg:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px]  "
     >
       <div className=" flex flex-col relative w-full  gap-y-[14px] xl:gap-y-[28px] items-center ">
         <div className="flex flex-col gap-y-[14px] xl:gap-y-[28px] relative w-full  ">
