@@ -34,7 +34,7 @@ const AuthProfilePic = () => {
   };
 
   return (
-    <form className="flex flex-col h-auto w-auto p-5 xl:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[30px] xl:gap-y-[90px]">
+    <form className="flex flex-col h-auto w-auto p-5 xs:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[30px] xl:gap-y-[90px]">
       <div className="flex flex-col items-center gap-y-5 xl:gap-y-10 ">
         <div className="flex flex-col gap-y-4 items-center  ">
           <h4 className="common-form-heading text-[18px] lg:text-common-form-heading ">Choose a Profile Picture</h4>
