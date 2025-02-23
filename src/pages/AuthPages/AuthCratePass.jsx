@@ -30,7 +30,7 @@ const AuthCratePass = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col h-auto w-auto p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[30px]"
+      className="flex flex-col h-auto w-auto p-5 xs:p-7 xl:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[30px]"
     >
       <div className="flex flex-col gap-y-6 items-center">
         <h4 className="common-form-heading">Create Password</h4>
