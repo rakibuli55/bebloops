@@ -80,7 +80,7 @@
 
   /* heading and paragraph styles started here */
   .common-para-one {
-    @apply text-[11px] xs:text-[14px] xl:text-[16px] font-medium leading-[150%] text-defaultGray;
+    @apply text-[13px] xs:text-[14px] xl:text-[16px] font-medium leading-[150%] text-defaultGray;
   }
 
   .common-form-heading {
@@ -90,7 +90,7 @@
 
   /* input design started here */
   .form-input {
-    @apply w-[250px] xl:w-[344px] h-auto py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3 text-base font-normal leading-[24px] text-secondaryGray ;
+    @apply w-[250px] xs:w-[280px]  xl:w-[344px] h-auto py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3 text-base font-normal leading-[24px] text-secondaryGray  ;
   }
   .profile-tabs-buttons button{
     @apply !py-[14px] !px-5 flex items-center gap-[14px] text-base font-medium text-[#4D4D4D] bg-[#F6F6F6] rounded-[8px] block w-full mt-5 justify-start;

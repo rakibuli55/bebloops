@@ -105,7 +105,7 @@ const AuthOtpVerify = () => {
                   {...field}
                   type="text"
                   maxLength={1}
-                  className=" h-[40px] xl:h-[60px] w-[50px] xl:w-[70px] bg-[#E0E0E0] outline-none rounded-[8px] text-center text-xl font-semibold"
+                  className=" h-[40px] xl:h-[60px] w-[50px] xl:w-[70px] bg-[#E0E0E0] outline-none rounded-[8px] text-center text-base xl:text-xl font-semibold"
                   onChange={e => handleInputChange(e, name)}
                   onKeyDown={e => handleKeyDown(e, name)}
                   onPaste={handlePaste}

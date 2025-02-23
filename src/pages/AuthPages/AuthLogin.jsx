@@ -27,10 +27,10 @@ const AuthLogin = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col h-auto w-auto p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] px-4 "
+      className="flex flex-col h-auto w-auto p-7  lg:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px]  "
     >
-      <div className=" flex flex-col relative w-full  gap-y-[28px] items-center ">
-        <div className="flex flex-col gap-y-[28px] relative w-full  ">
+      <div className=" flex flex-col relative w-full  gap-y-[14px] xl:gap-y-[28px] items-center ">
+        <div className="flex flex-col gap-y-[14px] xl:gap-y-[28px] relative w-full  ">
           <div className="flex flex-col gap-y-[8.5px] items-start   ">
             <h3 className="common-form-heading">
               Welcome <span className="text-2xl">👋</span>{" "}
@@ -133,7 +133,14 @@ const AuthLogin = () => {
                 Sign In Using Apple Account
               </span>
             </div>
-            <AuthButton Type={"submit"} Text={"Login"} />
+            <AuthButton
+              onClick={e => {
+                e.preventDefault();
+                navigate("/auth/user-selection");
+              }}
+              Type={"submit"}
+              Text={"Sign in with another email"}
+            />
           </div>
           <h4 className=" text-defaultGray text-[14px] lg:text-base  font-medium font-Urbanist leading-[160%] ">
             Don’t have an account?{" "}
