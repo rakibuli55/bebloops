@@ -34,11 +34,11 @@ const AuthProfilePic = () => {
   };
 
   return (
-    <form className="flex flex-col h-auto w-auto p-5 xl:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[30px] xl:gap-y-[90px]">
+    <form className="flex flex-col h-auto w-auto p-7 xs:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[30px] xl:gap-y-[90px]">
       <div className="flex flex-col items-center gap-y-5 xl:gap-y-10 ">
         <div className="flex flex-col gap-y-4 items-center  ">
-          <h4 className="common-form-heading">Choose a Profile Picture</h4>
-          <p className="text-center common-para-one ">
+          <h4 className="common-form-heading text-[18px] lg:text-common-form-heading ">Choose a Profile Picture</h4>
+          <p className="text-center common-para-one  ">
             Choose a photos that presents you!
           </p>
         </div>
@@ -54,7 +54,7 @@ const AuthProfilePic = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className=" w-[40px] xl:w-[60px] h-[40px] xl:h-[60px] bg-primaryColor rounded-full absolute bottom-0 right-0 mb-[50px] mr-[-25px] flex items-center justify-center ">
+            <div className=" w-[40px] xl:w-[60px] h-[40px] xl:h-[60px] bg-primaryColor rounded-full absolute bottom-0 right-0 mb-[50px] mr-[-20px] md:mr-[-25px] flex items-center justify-center ">
               <Cross className="h-[25px] w-[25px] " />
               <input
                 onChange={e => {

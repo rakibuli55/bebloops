@@ -30,7 +30,7 @@ const AuthCratePass = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col h-auto w-auto p-5 xl:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[30px]"
+      className="flex flex-col h-auto w-auto p-7 xl:p-10 border-[1px] border-solid bg-white border-[#BDBDBD] rounded-[10px] gap-y-[30px]"
     >
       <div className="flex flex-col gap-y-6 items-center">
         <h4 className="common-form-heading">Create Password</h4>
@@ -89,7 +89,7 @@ const AuthCratePass = () => {
               <input
                 placeholder="Confirm your password"
                 id="confirmPassword"
-                type="password"
+                type={isConfirmPass ? "password" : "text"}
                 className="form-input"
                 {...register("confirmPassword", {
                   required: "Confirm password is required",

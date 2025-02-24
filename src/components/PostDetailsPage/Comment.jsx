@@ -14,7 +14,7 @@ const Comment = ({ comment, parentId, onAddReply, onDelete }) => {
   };
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 comment-card">
       <div className="flex items-start gap-2 relative">
         <div>
           <img
@@ -23,14 +23,14 @@ const Comment = ({ comment, parentId, onAddReply, onDelete }) => {
             alt="userAvatar"
           />
         </div>
-        <div className="w-full">
+        <div className="break-words w-[calc(100%-40px)]">
           <p className="text-sm font-semibold text-themeBlack">
             {comment?.author}{" "}
             <span className="font-medium text-[12px] pl-[6px] border-l-[1px] border-themeBlack ml-1">
               {comment?.time}
             </span>
           </p>
-          <p className="mt-1 text-[15px] text-themeBlack">{comment?.text}</p>
+          <p className="mt-1 text-[15px] text-themeBlack custom-2xl:text-sm">{comment?.text}</p>
           <div className="comment-actions text-sm mt-2 font-medium hover:text-primaryColor duration-100 ease-in-out">
             <button onClick={() => setShowReplyInput(!showReplyInput)}>
               💬 Reply
