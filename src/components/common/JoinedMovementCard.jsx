@@ -3,6 +3,7 @@ import imageOne from "../../assets/images/join1.png";
 import imageTwo from "../../assets/images/join2.png";
 import imageThree from "../../assets/images/join3.png";
 import PrimaryButton from "./PrimaryButton";
+import { Link } from "react-router-dom";
 
 const JoinedMovementCard = ({ item, name }) => {
   const [isJoined, setIsjoined] = useState(false);
@@ -11,7 +12,7 @@ const JoinedMovementCard = ({ item, name }) => {
     setIsjoined((prev) => !prev);
   };
   return (
-    <div className="flex items-center flex-wrap justify-between border p-[10px] rounded-[6px] border-[#F6F6F6] custom-sm:border custom-sm:border-[#ECEBEB] custom-sm:p-3 custom-xs:border custom-xs:border-[#ECEBEB] custom-xs:p-4">
+    <Link to={'/movement/1'} className="flex items-center flex-wrap justify-between border p-[10px] rounded-[6px] border-[#F6F6F6] custom-sm:border custom-sm:border-[#ECEBEB] custom-sm:p-3 custom-xs:border custom-xs:border-[#ECEBEB] custom-xs:p-4">
       <div className="flex items-start gap-4 custom-2xl:gap-3 custom-xl:gap-3 custom-sm:flex-col">
         <img
           className="w-[70px] min-w-[70px] rounded-[6px] h-[70px] custom-2xl:w-[50px] custom-2xl:min-w-[50px] custom-2xl:h-[50px] custom-xl:w-[60px] custom-xl:min-w-[60px] custom-xl:h-[60px] custom-lg:w-[60px] custom-lg:min-w-[60px] custom-lg:h-[60px] max-md:w-[55px] max-md:min-w-[55px] max-md:h-[55px] object-cover"
@@ -63,7 +64,7 @@ const JoinedMovementCard = ({ item, name }) => {
           />
         </div>
       )}
-    </div>
+    </Link>
   );
 };
 

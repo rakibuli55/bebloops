@@ -7,13 +7,17 @@ import LanguageContent from "@/components/ProfilePage/LanguageContent";
 import SettingsContent from "@/components/ProfilePage/SettingsContent";
 import TermsConditionContent from "@/components/ProfilePage/TermsConditionContent";
 import PrivacyPolicyContent from "@/components/ProfilePage/PrivacyPolicyContent";
+import { useContext } from "react";
+import { TabContext } from "@/context";
 
 const ProfilePage = () => {
+  const {defaultTab} = useContext(TabContext)
+  console.log(defaultTab);
   return (
     <section>
       <div className="mt-6 custom-2xl:mt-4 custom-xl:mt-4 custom-lg:mt-2 custom-xs:mt-2">
         <Tabs
-          defaultValue="dashboard"
+          defaultValue={defaultTab}
           className="w-full flex items-start !bg-transparent max-md:flex-col"
         >
           <TabsSidebar />

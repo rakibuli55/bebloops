@@ -1,4 +1,4 @@
-import { SidebarContext } from "@/context";
+import { SidebarContext, TabContext } from "@/context";
 import { useContext, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { CiSearch } from "react-icons/ci";
@@ -104,6 +104,12 @@ const Navbar = () => {
     console.log(data);
   };
   const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
+  const { setDefaultTab } = useContext(TabContext);
+
+  const handleProfileMenuClick = () => {
+    setDefaultTab("profile");
+    setIsProfileOpen(!isProfileOpen);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -122,17 +128,17 @@ const Navbar = () => {
       ) {
         setIsProfileOpen(false);
       }
-      // if (window.innerWidth < 991) {
-      //   if (
-      //     isMobileSearch &&
-      //     searchInputRef.current &&
-      //     !searchInputRef.current.contains(event.target) &&
-      //     searchButtonRef.current &&
-      //     !searchButtonRef.current.contains(event.target)
-      //   ) {
-      //     setIsMobileSearch(false);
-      //   }
-      // }
+      if (window.innerWidth < 991) {
+        if (
+          isMobileSearch &&
+          searchInputRef.current &&
+          !searchInputRef.current.contains(event.target) &&
+          searchButtonRef.current &&
+          !searchButtonRef.current.contains(event.target)
+        ) {
+          setIsMobileSearch(false);
+        }
+      }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -144,7 +150,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full py-9 custom-2xl:py-6 custom-xl:py-6 custom-lg:py-5 bg-white flex items-center justify-between pr-[60px] custom-2xl:pr-5 custom-xl:pr-5 custom-lg:pr-4 z-[40] max-md:pr-5 max-md:py-4 max-md:pl-5 custom-xs:!px-4 custom-xs:!py-[10px]">
       <div className="opacity-0 invisible max-md:visible max-md:opacity-100 flex items-center gap-4 custom-xs:gap-3">
-        <Link to={"/home"}>
+        <Link to={"/"}>
           <img
             src={Logo}
             className="w-[120px] custom-xs:w-[104px]"
@@ -246,8 +252,9 @@ const Navbar = () => {
             >
               <li>
                 <Link
-                  to={"/"}
+                  to={"/profile"}
                   className="custom-2xl:!text-[15px] custom-xl:!text-[15px] custom-lg:!text-[15px]"
+                  onClick={handleProfileMenuClick}
                 >
                   Profile Settings
                 </Link>
@@ -256,6 +263,7 @@ const Navbar = () => {
                 <Link
                   to={"/"}
                   className="custom-2xl:!text-[15px] custom-xl:!text-[15px] custom-lg:!text-[15px]"
+                  onClick={handleProfileMenuClick}
                 >
                   Logout
                 </Link>
