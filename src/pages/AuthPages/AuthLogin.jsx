@@ -22,7 +22,7 @@ const AuthLogin = () => {
   const onSubmit = data => {
     console.log("Form Submitted:", data);
     // Perform actions like API requests
-    navigate("/home");
+    navigate("/");
   };
   return (
     <form
