@@ -151,7 +151,7 @@ const AuthInterest = () => {
             if (step === 1) {
               setstep(2);
             } else if (step === 2) {
-              navigate("/home");
+              navigate("/");
               setstep(1);
             }
           }}

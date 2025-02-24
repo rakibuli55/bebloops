@@ -133,7 +133,7 @@ const PostCard = ({type}) => {
       <p className="mt-3 text-base custom-2xl:text-[15px] custom-xl:text-[15px] text-themeBlack font-medium custom-sm:text-sm custom-xs:text-sm">
         The Public Speaking Practice Workshop starting in February sounds like a great opportunity for people at all skill levels to refine their...{" "}
         {
-            type !== 'full' && (<Link className="text-blue-500 cursor-pointer text-[15px] custom-sm:text-sm custom-xs:text-sm">See more</Link>)
+            type !== 'full' && (<Link to={'/post/1'} className="text-blue-500 cursor-pointer text-[15px] custom-sm:text-sm custom-xs:text-sm">See more</Link>)
         }
       </p>
     </div>

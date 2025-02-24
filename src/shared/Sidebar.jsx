@@ -8,7 +8,7 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/images/logo/logo.svg";
 
 const sidebarMenu = [
-  { name: "home", icon: <RiHome6Fill />, path: "/home" },
+  { name: "home", icon: <RiHome6Fill />, path: "/" },
   { name: "movement", icon: <FaUsers />, path: "/movement" },
   { name: "inbox", icon: <LuMessageCircleMore />, path: "/inbox" },
   { name: "profile", icon: <FaRegUser />, path: "/profile" },
@@ -25,7 +25,7 @@ const Sidebar = () => {
       <div>
         {/* header  */}
         <Link
-          to={"/home"}
+          to={"/"}
           className="inline-block pl-[65px] pr-[129px] custom-2xl:pr-[50px] custom-xl:pr-[50px] custom-lg:pr-[50px] pb-[50px] custom-2xl:pl-[25px] custom-2xl:pb-8 custom-xl:pl-[25px] custom-xl:pb-8 custom-lg:pl-[25px] custom-lg:pb-8 max-md:hidden"
         >
           <img className="w-[146px] h-[41px]" src={Logo} alt="" />
