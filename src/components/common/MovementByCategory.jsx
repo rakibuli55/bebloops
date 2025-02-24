@@ -1,4 +1,4 @@
-import MyJoinedMovementCard from "./MyJoinedMovementCard";
+import JoinedMovementCard from "./JoinedMovementCard";
 
 
 const MovementByCategory = ({item, name}) => {
@@ -9,7 +9,7 @@ const MovementByCategory = ({item, name}) => {
         {
             item?.posts?.map((postItem) => (
                 <div key={postItem?.id} className="mt-4 last:mb-4">
-                    <MyJoinedMovementCard item={postItem} name={name} />
+                    <JoinedMovementCard item={postItem} name={name} />
                 </div>
             ) )
         }

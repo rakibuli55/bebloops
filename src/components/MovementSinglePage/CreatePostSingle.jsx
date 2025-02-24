@@ -71,14 +71,14 @@ const CreatePostSingle = () => {
     <div>
       <Dialog>
       <DialogTrigger className="w-full">
-      <div className="flex items-center gap-3 py-[18px] px-[22px] bg-primaryColor rounded-[8px] cursor-pointer duration-200 hover:bg-[#4b51ef]">
-          <p className="text-[20px] text-white"><FaRegEdit /></p>
-          <p className="text-base font-semibold text-white">Create a Post</p>
+      <div className="flex items-center gap-3 py-[18px] px-[22px] bg-primaryColor rounded-[8px] cursor-pointer duration-200 hover:bg-[#4b51ef] custom-2xl:py-[14px] custom-xl:py-[14px] custom-lg:py-[14px] custom-md:py-[14px] custom-sm:py-[14px] custom-xs:py-[12px] custom-xs:px-3 custom-xs:gap-2 custom-xs:rounded-[6px]">
+          <p className="text-[20px] text-white custom-xs:text-[18px]"><FaRegEdit /></p>
+          <p className="text-base font-semibold text-white custom-xs:text-sm">Create a Post</p>
       </div>
       </DialogTrigger>
-      <DialogContent className="max-w-[682px] max-h-[720px] overflow-y-auto rounded-[12px] bg-[#F8F8F8]">
+      <DialogContent className="max-w-[682px] max-h-[calc(100vh-100px)] overflow-y-auto rounded-[12px] bg-[#F8F8F8] custom-xs:p-4 custom-sm:p-5 custom-sm:max-w-[92%] custom-xs:max-w-[92%]">
         <div>
-          <h3 className="text-[24px] font-semibold text-themeBlack text-center mb-[48px]">Create a Post</h3>
+          <h3 className="text-[24px] font-semibold text-themeBlack text-center mb-[48px] custom-sm:text-[18px] custom-xs:text-[18px] custom-sm:mb-5 custom-xs:mb-5">Create a Post</h3>
           <form onSubmit={handleSubmit(onSubmit)}>
             <Controller 
               name="videoFiles"
@@ -87,7 +87,7 @@ const CreatePostSingle = () => {
               render={({field: {value}}) => (
                 <>
                 <div {...getVideoRootProps()}
-                className={`border-[2px] min-h-[160px] border-dashed rounded-[10px] flex items-center justify-center bg-white py-10 px-[55px] ${isDragActiveVideo ? 'bg-[rgba(230,230,255,0.43)]' : ''} ${errors.videoFiles ? 'border-red-500' : 'border-[#B5B5B5]'}`}
+                className={`border-[2px] min-h-[160px] border-dashed rounded-[10px] flex items-center justify-center bg-white py-10 px-[55px] custom-xs:min-h-[140px] custom-xs:py-5 custom-sm:min-h-[140px] custom-sm:py-5 ${isDragActiveVideo ? 'bg-[rgba(230,230,255,0.43)]' : ''} ${errors.videoFiles ? 'border-red-500' : 'border-[#B5B5B5]'}`}
                 >
                    <input {...getVideoInputProps()} />
                    {
@@ -102,13 +102,13 @@ const CreatePostSingle = () => {
                             <ul>
                               {
                                 value.map((file) => (
-                                  <li key={file?.name}>
+                                  <li key={file?.name} className="text-base font-medium mt-2 custom-xs:text-sm custom-xs:text-center">
                                     {file?.name}
                                   </li>
                                 ))
                               }
                             </ul>
-                            ) : (<p className="text-base font-medium mt-2">Drag & drop and your video or <span className="text-primaryColor cursor-pointer hover:opacity-50 duration-100 ease-in-out">browse here..</span></p>)
+                            ) : (<p className="text-base font-medium mt-2 custom-xs:text-sm custom-xs:text-center">Drag & drop and your video or <span className="text-primaryColor cursor-pointer hover:opacity-50 duration-100 ease-in-out">browse here..</span></p>)
                           }
                         </div>
                     }

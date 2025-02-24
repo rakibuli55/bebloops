@@ -7,7 +7,7 @@ import spanishImg from "../../assets/images/spanish.png"
 const LanguageContent = () => {
   return (
     <div>
-     <h3 className="text-[30px] font-semibold text-themeBlack mb-8">
+     <h3 className="text-[30px] font-semibold text-themeBlack mb-8 custom-2xl:text-[24px] custom-xl:text-[22px] custom-2xl:mb-7 custom-xl:mb-7 custom-lg:text-[23px] custom-lg:mb-6 max-md:text-[22px] max-md:mb-5 custom-xs:!text-[18px]">
         Dashboard
       </h3>
       <form>

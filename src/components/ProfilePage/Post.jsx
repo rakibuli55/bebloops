@@ -9,7 +9,7 @@ const Post = ({ post }) => {
         />
       </div>
       <div>
-        <p className="text-base text-themeBlack mt-3">{post?.title}</p>
+        <p className="text-base text-themeBlack mt-3 max-md:text-sm">{post?.title}</p>
       </div>
     </div>
   );

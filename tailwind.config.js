@@ -29,6 +29,14 @@ export default {
         "2xl": "1200px", // Standard desktop screens
         "3xl": "1500px", // Larger desktop displays
         "4xl": "1920px", // High-resolution or ultra-wide displays
+        "custom-xs": { min: "360px", max: "479px" },
+        "custom-sm": { min: "480px", max: "575px" },
+        "custom-md": { min: "576px", max: "991px" },
+        "max-md": { max: "991px" },
+        "custom-2xl": { min: "1366px", max: "1919px" },
+        "max-xl": { max: "1200px" },
+        "custom-xl": { min: "1200px", max: "1365px" },
+        "custom-lg": { min: "992px", max: "1199px" },
       },
       borderRadius: {
         lg: "var(--radius)",
