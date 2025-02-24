@@ -50,14 +50,14 @@ const ProfileContent = () => {
 
   return (
     <div>
-      <h3 className="text-[30px] font-semibold text-themeBlack mb-8">
+      <h3 className="text-[30px] font-semibold text-themeBlack mb-8 custom-2xl:text-[24px] custom-xl:text-[22px] custom-2xl:mb-7 custom-xl:mb-7 custom-lg:text-[23px] custom-lg:mb-6 max-md:text-[22px] max-md:mb-5 custom-xs:!text-[18px]">
         Profile
       </h3>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* profile image  */}
         <div>
-          <div className="relative h-[100px] w-[100px] mx-auto">
+          <div className="relative h-[100px] custom-xs:h-[80px] custom-xs:w-[80px] w-[100px] mx-auto">
             <input
               type="file"
               name="avatar"
@@ -67,18 +67,18 @@ const ProfileContent = () => {
               onChange={handleImageChange}
             />
             <img
-              className="h-[100px] w-[100px] object-cover rounded-full"
+              className="h-[100px] w-[100px] custom-xs:h-[80px] custom-xs:w-[80px] object-cover rounded-full"
               src={avatar}
               alt="profileAvatar"
             />
             <label
               htmlFor="avatar"
-              className="cursor-pointer w-[30px] h-[30px] bg-primaryColor rounded-full text-white text-base flex items-center justify-center absolute bottom-0 right-0"
+              className="cursor-pointer w-[30px] h-[30px] bg-primaryColor rounded-full text-white text-base flex items-center justify-center absolute bottom-0 right-0 custom-xs:w-6 custom-xs:h-6 custom-xs:text-sm custom-xs:right-1"
             >
               <FiEdit />
             </label>
           </div>
-          <h3 className="text-center text-[24px] font-semibold text-themeBlack mt-4">
+          <h3 className="text-center text-[24px] custom-2xl:text-[20px] custom-xl:text-[20px] font-semibold text-themeBlack mt-4 custom-lg:text-[18px] max-md:text-[18px] custom-xs:!text-base custom-xs:mt-3">
             Md Mosharaf
           </h3>
         </div>
@@ -131,7 +131,7 @@ const ProfileContent = () => {
               onClick={() => setisCalenderShow(!isCalenderShow)}
             />
             {isCalenderShow && (
-              <div className="absolute">
+              <div className="absolute custom-sm:w-full custom-xs:w-full">
                  <Controller
                   name="dateOfBirth"
                   control={control}
@@ -153,7 +153,7 @@ const ProfileContent = () => {
         </div>
         {/* gender  */}
         <div className="mt-5">
-          <label htmlFor="gender">Gender</label>
+          <label htmlFor="gender" className="max-md:text-sm">Gender</label>
           <div className="mt-[7px]">
             <Controller
               name="gender"
@@ -161,7 +161,7 @@ const ProfileContent = () => {
               rules={{ required: "Please enter your gender" }}
               render={({ field }) => (
                 <Select {...field} defaultValue={field.value}>
-                  <SelectTrigger className="w-full h-[48px] focus:ring-0 focus:outline-none focus:ring-offset-0">
+                  <SelectTrigger className="w-full h-[48px] custom-xs:h-[40px] focus:ring-0 focus:outline-none focus:ring-offset-0">
                     <SelectValue placeholder="Select your gender" />
                   </SelectTrigger>
                   <SelectContent>
@@ -181,7 +181,7 @@ const ProfileContent = () => {
         </div>
         {/* gender  */}
         <div className="mt-5">
-          <label htmlFor="country">Country</label>
+          <label htmlFor="country" className="max-md:text-sm">Country</label>
           <div className="mt-[7px]">
             <Controller
               name="country"
@@ -189,7 +189,7 @@ const ProfileContent = () => {
               rules={{ required: "Please enter your country" }}
               render={({ field }) => (
                 <Select {...field} defaultValue={field.value}>
-                  <SelectTrigger className="w-full h-[48px] focus:ring-0 focus:outline-none focus:ring-offset-0">
+                  <SelectTrigger className="w-full h-[48px] custom-xs:h-[40px] focus:ring-0 focus:outline-none focus:ring-offset-0">
                     <SelectValue placeholder="Select your country" />
                   </SelectTrigger>
                   <SelectContent>
@@ -207,7 +207,7 @@ const ProfileContent = () => {
             )}
           </div>
         </div>
-        <button type="submit" className="mt-10 p-4 w-full bg-primaryColor text-[18px] rounded-[8px] text-white font-semibold">Save</button>
+        <button type="submit" className="mt-10 custom-lg:mt-6 p-4 w-full bg-primaryColor text-[18px] rounded-[8px] text-white font-semibold custom-2xl:py-3 custom-2xl:text-base custom-xl:py-3 custom-xl:text-base custom-lg:text-base custom-lg:py-2 max-md:py-[10px] max-md:text-base max-md:mt-6 custom-xs:!py-2 custom-xs:!text-sm">Save</button>
       </form>
     </div>
   );

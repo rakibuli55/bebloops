@@ -40,8 +40,8 @@ const MyMovement = () => {
     <div className='p-4 rounded-[8px] bg-white'>
       {/* title  */}
       <div className='flex items-center justify-between'>
-        <p className='text-[18px] text-themeBlack font-semibold'>My Movement</p>
-        <Link to={'/'} className='inline-block text-primaryColor'>See all</Link>
+        <p className='text-[18px] text-themeBlack font-semibold custom-2xl:text-[17px]'>My Movement</p>
+        <Link to={'/'} className='inline-block text-primaryColor custom-2xl:text-sm'>See all</Link>
       </div>
       <div>
         {
