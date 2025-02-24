@@ -16,13 +16,13 @@ const AuthUserSelection = () => {
 
   return (
     <form className="flex flex-col items-center h-auto w-auto p-5 2xl:p-10   border-[1px] border-solid   bg-white border-[#BDBDBD] rounded-[10px] ">
-      <div className=" my-[20px] xl:my-[60px] flex flex-col gap-y-[40px] items-center ">
+      <div className=" my-[20px] xl:my-[60px] flex flex-col gap-y-5 lg:gap-y-[40px] items-center ">
         <img
           src={SiteLogo}
           className="w-[213px] h-[60px] object-cover cursor-default block "
           alt="not found"
         />
-        <div className="flex flex-col gap-y-10 items-center ">
+        <div className="flex flex-col gap-y-5 lg:gap-y-10 items-center ">
           <div className="flex flex-col gap-y-3 max-w-[339px] items-center ">
             <h4 className="common-form-heading">Welcome to Bebloops</h4>
             <p className="text-center common-para-one ">
@@ -30,7 +30,7 @@ const AuthUserSelection = () => {
               positive change.
             </p>
           </div>
-          <div className="flex flex-col  gap-y-8">
+          <div className="flex flex-col  gap-y-4 lg:gap-y-8">
             <div className="flex flex-col w-full  gap-y-4  xl:w-[344px] ">
               <AuthButton
                 Text={"Join as an Individual"}

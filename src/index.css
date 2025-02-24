@@ -83,6 +83,10 @@
     @apply text-[13px] xs:text-[14px] xl:text-[16px] font-medium leading-[150%] text-defaultGray;
   }
 
+  .common-para-two {
+    @apply text-[11px] xs:text-[12px] sm:text-[14px] xl:text-[16px] font-medium leading-[150%] text-defaultGray;
+  }
+
   .common-form-heading {
     @apply text-darkBlack leading-[150%] font-semibold text-xl;
   }
@@ -90,7 +94,7 @@
 
   /* input design started here */
   .form-input {
-    @apply w-[250px] xs:w-[280px]  xl:w-[344px] h-auto py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3 text-base font-normal leading-[24px] text-secondaryGray  ;
+    @apply w-[250px] xs:w-[280px]  xl:w-[344px] h-auto py-2 xl:py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3 text-base font-normal leading-[24px] text-secondaryGray  ;
   }
   .profile-tabs-buttons button{
     @apply !py-[14px] !px-5 flex items-center gap-[14px] text-base font-medium text-[#4D4D4D] bg-[#F6F6F6] rounded-[8px] block w-full mt-5 justify-start;
