@@ -16,7 +16,7 @@ const AuthButton = ({
       className={` ${
         iSTransparent
           ? `p-[10px] xl:p-[16px] bg-transparent text-primaryColor h-auto ${
-              !CustomWidth ? "max-w-[367px]" : ` w-[270px] xl:w-[600px]`
+              !CustomWidth ? " w-auto md:max-w-[367px]" : ` w-[270px] xl:w-[600px]`
             }  rounded-[12px] text-xs xl:text-base font-semibold leading-[150%] ease-in-out duration-300 hover:bg-primaryColor hover:text-white border-[1px] border-solid hover:border-transparent border-primaryColor`
           : ` p-[10px] xl:p-[16px] bg-primaryColor text-white h-auto ${
               !CustomWidth ? "max-w-[367px]" : ` w-[270px] lg:w-[600px]`

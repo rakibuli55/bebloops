@@ -52,15 +52,15 @@ const allPosts = [
 
 const MovementSinglePage = () => {
   return (
-    <section className="pt-6 pb-6">
-      <div className="bg-white p-5 rounded-[16px]">
+    <section className="pt-6 pb-6 custom-2xl:pt-4 custom-xl:pt-4 custom-lg:pt-4 custom-xs:pt-2">
+      <div className="bg-white p-5 rounded-[16px] custom-2xl:rounded-[8px] custom-xl:rounded-[8px] custom-lg:rounded-[8px] max-md:rounded-[8px] custom-xs:p-[14px]">
         <MovementProfile item={movementProfile} />
-        <div className="pt-4 mt-6 border-t border-[#ECEBEB]">
-          <div className="w-[422px]">
+        <div className="pt-4 mt-6 border-t border-[#ECEBEB] custom-xs:mt-[17px]">
+          <div className="w-[422px] custom-sm:w-full custom-xs:w-full">
             <CreatePostSingle />
           </div>
           {/* all post  */}
-          <div className="grid grid-cols-3 gap-1 mt-5">
+          <div className="grid grid-cols-3 custom-sm:grid-cols-2 custom-xs:grid-cols-2 gap-1 mt-5">
             {allPosts.map((post) => (
               <VideoPost item={post} />
             ))}

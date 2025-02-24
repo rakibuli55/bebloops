@@ -60,7 +60,7 @@ const AuthUserSelection = () => {
               <input
                 onChange={handleCheck}
                 type="checkbox"
-                className=" w-3 h-3 lg:mb-5 mb-10 "
+                className=" w-3 h-3 lg:mb-5 mb-9  "
               />
               <p className="sm:max-w-[340px] common-para-one text-[14px] ">
                 I hereby confirm and accept the{" "}

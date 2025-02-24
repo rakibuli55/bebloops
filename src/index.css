@@ -44,19 +44,16 @@
     @apply bg-[#cecece] rounded-[10px];
   }
   header .profile-dropdown {
-    @apply absolute right-0 w-[220px] bg-white shadow-lg rounded-[8px] py-4;
+    @apply absolute right-0 w-[220px] custom-xl:w-[180px] max-md:w-[150px] max-md:py-3 bg-white shadow-lg rounded-[8px] py-4 custom-xl:py-2 custom-xl:pb-3;
   }
   header .profile-dropdown li a {
-    @apply block px-6 py-2 text-base font-medium duration-200 ease-in-out hover:bg-primaryLight hover:text-primaryColor;
+    @apply block px-6 py-2 custom-xl:px-4 custom-xl:pb-0 text-base max-md:text-sm max-md:px-4 max-md:py-1 font-medium duration-200 ease-in-out hover:bg-primaryLight hover:text-primaryColor;
   }
   .engagement-option:hover p {
     @apply text-primaryColor;
   }
-  .post-card:hover .media button {
-    @apply opacity-100;
-  }
   .tab-button {
-    @apply !p-0 !text-[20px] !text-themeBlack !relative !bg-transparent !shadow-none;
+    @apply !p-0 !text-[20px] custom-2xl:!text-[17px] custom-xl:!text-[17px] custom-lg:!text-[17px] custom-md:!text-[17px] custom-sm:!text-base custom-xs:!text-base !text-themeBlack !relative !bg-transparent !shadow-none;
   }
   .tab-button:before {
     content: "";
@@ -69,7 +66,7 @@
     @apply !text-primaryColor;
   }
   .post-input {
-    @apply py-3 px-[10px] border border-[#DADADA] rounded-[6px] text-themeBlack focus:outline-none w-full text-sm;
+    @apply py-3 px-[10px] border border-[#DADADA] rounded-[6px] text-themeBlack focus:outline-none w-full text-sm custom-xs:py-[9px];
   }
   .post-label {
     @apply text-sm text-themeBlack pb-2 inline-block font-medium;
@@ -94,16 +91,16 @@
 
   /* input design started here */
   .form-input {
-    @apply w-[250px] xs:w-[280px]  xl:w-[344px] h-auto py-2 xl:py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3 text-base font-normal leading-[24px] text-secondaryGray  ;
+    @apply w-[250px] xs:w-[280px]  xl:w-[344px] h-auto py-2 xl:py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3  text-sm md:text-base font-normal leading-[24px] text-secondaryGray  ;
   }
   .profile-tabs-buttons button{
-    @apply !py-[14px] !px-5 flex items-center gap-[14px] text-base font-medium text-[#4D4D4D] bg-[#F6F6F6] rounded-[8px] block w-full mt-5 justify-start;
+    @apply !py-[14px] !px-5 flex items-center gap-[14px] text-base font-medium text-[#4D4D4D] bg-[#F6F6F6] rounded-[8px] w-full mt-5 justify-start custom-2xl:!py-3 custom-2xl:!px-4 custom-2xl:text-sm custom-2xl:gap-[10px] custom-2xl:rounded-[6px] custom-xl:!px-4 custom-xl:text-sm custom-xl:overflow-hidden custom-xl:rounded-[6px] custom-xl:first:mt-0 custom-lg:first:mt-0 max-md:first:mt-0 custom-xl:mt-4 custom-xl:!py-3 custom-xl:gap-2 custom-lg:mt-4 custom-lg:!py-2 custom-lg:gap-[6px] custom-lg:!text-[13px] custom-lg:!px-2 max-md:mt-0 max-md:w-10 max-md:h-10 max-md:flex max-md:items-center max-md:justify-center max-md:rounded-[6px];
   }
   .profile-tabs-buttons button[data-state="active"] {
     @apply bg-primaryColor text-white;
   }
   .dash-tab-content{
-    @apply h-[calc(100vh-227px)] overflow-y-auto;
+    @apply h-[calc(100vh-227px)] custom-2xl:h-[calc(100vh-188px)] custom-xl:h-[calc(100vh-160px)] max-md:h-full overflow-y-auto;
   }
   .dash-post-card:hover img{
     @apply scale-[1.1];
@@ -112,9 +109,16 @@
     @apply hidden;
   }
   .language-feild label{
-    @apply flex items-center py-4 px-5 rounded-[6px] font-medium text-themeBlack bg-[#F6F6F6] mt-4 first:mt-0 cursor-pointer gap-[14px] duration-200 ease-in-out;
+    @apply flex items-center py-4 px-5 rounded-[6px] font-medium text-themeBlack bg-[#F6F6F6] mt-4 first:mt-0 cursor-pointer gap-[14px] duration-200 ease-in-out custom-lg:py-[10px] custom-lg:px-3 custom-lg:text-sm max-md:py-3 max-md:px-3 max-md:text-sm custom-xs:!py-[10px] custom-xs:!px-3 custom-xs:!gap-2;
   }
   .language-feild input:checked + label {
     @apply bg-primaryColor text-white;
   }
+  
+}
+.swiper-pagination-bullet{
+  @apply !bg-[#CFD7ED] !opacity-60;
+}
+.swiper-pagination-bullet-active{
+  @apply !bg-primaryColor !opacity-100;
 }

@@ -112,12 +112,12 @@ const CommentSection = () => {
   }
 
   return (
-    <div className="py-6 pl-5 pr-2 bg-white rounded-tl-[16px] rounded-tr-[16px] min-h-[695px]">
-      <h3 className="text-lg font-semibold mb-6">
+    <div className="py-6 pl-5 pr-2 bg-white rounded-tl-[16px] rounded-tr-[16px] min-h-[695px] custom-xs:!min-h-[100%] custom-2xl:min-h-[607px] custom-2xl:pl-4 custom-2xl:py-4 custom-2xl:rounded-[8px] custom-xl:rounded-[8px] custom-lg:rounded-[8px] max-md:rounded-[8px]">
+      <h3 className="text-lg font-semibold mb-6 custom-2xl:mb-3 custom-xs:mb-3">
         {comments?.length} Comments
       </h3>
       {/* comments  */}
-      <div className="comments-area h-[530px] overflow-y-auto pr-3">
+      <div className="comments-area h-[530px] custom-2xl:h-[480px] overflow-y-auto pr-3">
         {comments.map((comment) => (
           <Comment
             key={comment?.id}
@@ -136,7 +136,7 @@ const CommentSection = () => {
           src={userImg}
           alt="userImg"
         />
-        <div className="w-full relative">
+        <div className="w-full relative pr-2">
           <input
             className="border-b border-[#4D4D4D] bg-transparent pb-2 text-sm font-medium focus:outline-none w-full"
             value={newComment}
@@ -145,7 +145,7 @@ const CommentSection = () => {
           />
           {/* add a new comment button  */}
           <button
-            className="absolute bottom-[10px] right-0 h-8 w-8 bg-primaryColor flex items-center justify-center rounded-full text-white"
+            className="absolute bottom-[10px] right-2 h-8 w-8 bg-primaryColor flex items-center justify-center rounded-full text-white"
             onClick={() => handleAddComment(newComment)}
             onChange={(e) => setNewComment(e.target.value)}
           >

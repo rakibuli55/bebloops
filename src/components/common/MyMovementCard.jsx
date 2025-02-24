@@ -44,18 +44,18 @@ const MyMovementCard = ({ item }) => {
   return (
     <Link
       to={"/movement/1"}
-      className="relative flex items-center gap-4 border border-[#F6F6F6] rounded-[6px] p-[10px]"
+      className="relative flex items-start gap-4 custom-2xl:gap-3 border border-[#F6F6F6] rounded-[6px] p-[10px] custom-sm:flex-col custom-sm:border custom-sm:border-[#ECEBEB] custom-xs:flex-col custom-xs:border custom-xs:border-[#ECEBEB] custom-xs:p-4"
     >
       <img
-        className="w-[70px] min-w-[70px] h-[70px] object-cover"
+        className="w-[70px] min-w-[70px] h-[70px] rounded-[6px] custom-2xl:w-[50px] custom-2xl:min-w-[50px] custom-2xl:h-[50px] custom-xl:w-[60px] custom-xl:min-w-[60px] custom-xl:h-[60px] custom-lg:w-[60px] custom-lg:min-w-[60px] custom-lg:h-[60px] max-md:w-[55px] max-md:min-w-[55px] max-md:h-[55px] object-cover"
         src={item?.img}
         alt=""
       />
       <div>
-        <h3 className="text-base font-semibold text-themeBlack">
+        <h3 className="text-base custom-2xl:text-sm font-semibold text-themeBlack">
           {item?.title}
         </h3>
-        <p className="mt-1 text-sm text-[#4D4D4D]">{item?.description}</p>
+        <p className="mt-1 text-sm text-[#4D4D4D] custom-2xl:text-[13px]">{item?.description}</p>
       </div>
       <div className="absolute top-[10px] right-2">
         <p
