@@ -40,7 +40,7 @@ const AuthLogin = () => {
             </h4>
           </div>
           <div className="flex flex-col gap-y-3 w-full relative items-center  ">
-            <div className="flex flex-col gap-y-4  ">
+            <div className="flex flex-col gap-y-4 w-full  ">
               {/* Email Input */}
               <div className="flex flex-col gap-y-2">
                 <label
@@ -54,7 +54,7 @@ const AuthLogin = () => {
                   id="email"
                   name="email"
                   type="email"
-                  className="form-input"
+                  className="form-input "
                   {...register("email", {
                     required: "Email is required",
                     pattern: {
@@ -79,7 +79,7 @@ const AuthLogin = () => {
                   <input
                     placeholder="Enter your password"
                     type={isPass ? "password" : "text"}
-                    className="form-input relative "
+                    className="form-input relative pr-[40px]  "
                     {...register("password", {
                       required: "Password is required",
                       minLength: {
@@ -93,14 +93,14 @@ const AuthLogin = () => {
                       onClick={() => {
                         setIspass(!isPass);
                       }}
-                      className="absolute top-1/2 h-5 w-5 right-3 transform -translate-y-1/2 cursor-pointer text-gray-500"
+                      className="absolute top-1/2 h-5 w-5 right-3 mr-[10px] transform -translate-y-1/2 cursor-pointer text-gray-500"
                     />
                   ) : (
                     <FaEye
                       onClick={() => {
                         setIspass(!isPass);
                       }}
-                      className="absolute top-1/2 h-5 w-5 right-3 transform -translate-y-1/2 cursor-pointer text-gray-500"
+                      className="absolute top-1/2 h-5 w-5 right-3 mr-[10px] transform -translate-y-1/2 cursor-pointer text-gray-500"
                     />
                   )}
                 </div>
@@ -121,15 +121,15 @@ const AuthLogin = () => {
         </div>
         <div className="flex flex-col gap-y-5 items-center ">
           <div className="flex flex-col gap-y-[18px]">
-            <div className="flex flex-row items-center gap-x-3 2xl:gap-x-6 px-3 2xl:px-6 py-[10px] 2xl:py-[14px] border-[1px] border-solid border-[#DADADA] rounded-[12px] cursor-pointer ">
+            <div className="flex flex-row items-center gap-x-3 2xl:gap-x-6 px-6 2xl:px-6 py-[10px] 2xl:py-[14px] border-[1px] border-solid border-[#DADADA] rounded-[12px] cursor-pointer ">
               <GoogleLogo />
-              <span className="common-para-one ">
+              <span className="common-para-two ">
                 Sign In Using Google Account
               </span>
             </div>
             <div className="flex flex-row items-center gap-x-3 2xl:gap-x-6 px-3 2xl:px-6 py-[10px] 2xl:py-[14px] border-[1px] border-solid border-[#DADADA] rounded-[12px] cursor-pointer ">
               <AppleLogo />
-              <span className="common-para-one ">
+              <span className="common-para-two ">
                 Sign In Using Apple Account
               </span>
             </div>

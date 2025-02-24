@@ -80,6 +80,10 @@
     @apply text-[13px] xs:text-[14px] xl:text-[16px] font-medium leading-[150%] text-defaultGray;
   }
 
+  .common-para-two {
+    @apply text-[11px] xs:text-[12px] sm:text-[14px] xl:text-[16px] font-medium leading-[150%] text-defaultGray;
+  }
+
   .common-form-heading {
     @apply text-darkBlack leading-[150%] font-semibold text-xl;
   }
@@ -87,7 +91,7 @@
 
   /* input design started here */
   .form-input {
-    @apply w-[250px] xs:w-[280px]  xl:w-[344px] h-auto py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3 text-base font-normal leading-[24px] text-secondaryGray  ;
+    @apply w-[250px] xs:w-[280px]  xl:w-[344px] h-auto py-2 xl:py-4 outline-none border-[1px] border-solid border-[#DADADA] rounded-[8px] px-3  text-sm md:text-base font-normal leading-[24px] text-secondaryGray  ;
   }
   .profile-tabs-buttons button{
     @apply !py-[14px] !px-5 flex items-center gap-[14px] text-base font-medium text-[#4D4D4D] bg-[#F6F6F6] rounded-[8px] w-full mt-5 justify-start custom-2xl:!py-3 custom-2xl:!px-4 custom-2xl:text-sm custom-2xl:gap-[10px] custom-2xl:rounded-[6px] custom-xl:!px-4 custom-xl:text-sm custom-xl:overflow-hidden custom-xl:rounded-[6px] custom-xl:first:mt-0 custom-lg:first:mt-0 max-md:first:mt-0 custom-xl:mt-4 custom-xl:!py-3 custom-xl:gap-2 custom-lg:mt-4 custom-lg:!py-2 custom-lg:gap-[6px] custom-lg:!text-[13px] custom-lg:!px-2 max-md:mt-0 max-md:w-10 max-md:h-10 max-md:flex max-md:items-center max-md:justify-center max-md:rounded-[6px];

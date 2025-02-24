@@ -28,7 +28,7 @@ const AuthForgetPass = () => {
           <h2 className="common-form-heading text-[#333] ">
             Forgot Your Password?
           </h2>
-          <p className="common-para-one  text-center max-w-[327px] h-[63px] lg:font-normal ">
+          <p className="common-para-one  text-center w-[250px] xs:w-[280px]  xl:w-[344px]   h-[63px] lg:font-normal ">
             Please enter your registered & we sent an OTP Verification code to
             reset your password.
           </p>
@@ -56,8 +56,8 @@ const AuthForgetPass = () => {
             <p className="text-red-500 text-sm">{errors.email.message}</p>
           )}
         </div>
+        <AuthButton Text={"Proceed"} />
       </div>
-      <AuthButton Text={"Proceed"} />
     </form>
   );
 };
