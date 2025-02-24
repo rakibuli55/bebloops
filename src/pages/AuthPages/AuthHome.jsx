@@ -22,13 +22,13 @@ const AuthHome = () => {
             <div className="flex flex-col gap-y-[18px]">
               <div className="flex flex-row items-center gap-x-3 2xl:gap-x-6 px-3 2xl:px-6 py-[10px] 2xl:py-[14px] border-[1px] border-solid border-[#DADADA] rounded-[12px] cursor-pointer ">
                 <GoogleLogo />
-                <span className="common-para-one ">
+                <span className="common-para-two ">
                   Sign In Using Google Account
                 </span>
               </div>
               <div className="flex flex-row items-center gap-x-3 2xl:gap-x-6 px-3 2xl:px-6 py-[10px] 2xl:py-[14px] border-[1px] border-solid border-[#DADADA] rounded-[12px] cursor-pointer ">
                 <AppleLogo />
-                <span className="common-para-one ">
+                <span className="common-para-two ">
                   Sign In Using Apple Account
                 </span>
               </div>
