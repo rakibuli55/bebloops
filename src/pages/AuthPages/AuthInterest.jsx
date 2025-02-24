@@ -40,7 +40,7 @@ const AuthInterest = () => {
   console.log(selctedValue);
 
   return (
-    <section className="pt-5  px-5 lg:px-10 xl:px-0 flex flex-col gap-y-5 xl:gap-y-10 items-center">
+    <section className="pt-5    px-5 lg:px-10 xl:px-0 flex flex-col gap-y-5 xl:gap-y-10 items-center">
       {step === 1 ? (
         <div className="flex flex-col gap-y-3 xl:gap-y-6 items-center ">
           <h6 className="common-para-one">Step 1 of 2</h6>
@@ -67,8 +67,8 @@ const AuthInterest = () => {
         </div>
       )}
       {step === 1 ? (
-        <div className="flex flex-col gap-y-8 h-[400px] overflow-y-scroll py-4 pr-5 ">
-          <div className="relative w-full">
+        <div className="flex flex-col gap-y-8 h-[400px] w-full relative overflow-y-scroll py-4 pr-5 ">
+          <div className="relative ">
             <input
               placeholder="Search for more interest"
               type="text"
@@ -81,14 +81,14 @@ const AuthInterest = () => {
           <Accordion.Root
             type="single"
             collapsible
-            value={openItem} 
+            value={openItem}
             onValueChange={setOpenItem} // Update state on accordion item change
-            className="flex flex-col gap-y-4"
+            className="flex flex-col relative max-w-[600px]  gap-y-4"
           >
             {[0, 1, 2, 3].map((item, index) => (
               <Accordion.Item
                 key={index}
-                className=" w-[250px] xs:w-[310px] sm:w-[440px] md:w-[500px]  lg:w-[600px] min-h-[50px] rounded-[8px] border-[1px] border-solid border-[#DADADA]"
+                className=" w-full  min-h-[50px] rounded-[8px] border-[1px] border-solid border-[#DADADA]"
                 value={`item-${index}`} // Set unique value for each item
               >
                 <Accordion.Header>
@@ -138,26 +138,27 @@ const AuthInterest = () => {
           </Accordion.Root>
         </div>
       ) : (
-        <div className="flex flex-row gap-6 2xl:mx-[100px] xxl:w-[1520px] h-[350px] overflow-y-scroll items-center justify-center flex-wrap ">
+        <div className="flex flex-row gap-6 2xl:mx-[100px] 2xl:w-[1420px]  h-[350px] overflow-y-scroll items-center justify-center flex-wrap ">
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((item, index) => {
             return <JoinCard key={index} />;
           })}
         </div>
       )}
-
-      <AuthButton
-        onClick={e => {
-          e.preventDefault();
-          if (step === 1) {
-            setstep(2);
-          } else if (step === 2) {
-            navigate("/home");
-            setstep(1);
-          }
-        }}
-        CustomWidth={true}
-        Text={"Next"}
-      />
+      <div className="w-full relative flex items-center justify-center  ">
+        <AuthButton
+          onClick={e => {
+            e.preventDefault();
+            if (step === 1) {
+              setstep(2);
+            } else if (step === 2) {
+              navigate("/home");
+              setstep(1);
+            }
+          }}
+          CustomWidth={true}
+          Text={"Next"}
+        />
+      </div>
     </section>
   );
 };
