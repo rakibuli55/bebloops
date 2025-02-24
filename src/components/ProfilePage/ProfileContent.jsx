@@ -207,7 +207,7 @@ const ProfileContent = () => {
             )}
           </div>
         </div>
-        <button type="submit" className="mt-10 custom-lg:mt-6 p-4 w-full bg-primaryColor text-[18px] rounded-[8px] text-white font-semibold custom-2xl:py-3 custom-2xl:text-base custom-xl:py-3 custom-xl:text-base custom-lg:text-base custom-lg:py-2 max-md:py-[10px] max-md:text-base max-md:mt-6 custom-xs:!py-2 custom-xs:!text-sm">Save</button>
+        <button type="submit" className="mt-10 custom-lg:mt-6 py-3 p-4 w-full bg-primaryColor text-[18px] rounded-[8px] text-white font-semibold custom-2xl:py-3 custom-2xl:text-base custom-xl:py-3 custom-xl:text-base custom-lg:text-base custom-lg:py-2 max-md:py-[10px] max-md:text-base max-md:mt-6 custom-xs:!py-2 custom-xs:!text-sm">Save</button>
       </form>
     </div>
   );
