@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import PrimaryButton from './PrimaryButton';
 import postVideo from '../../assets/videos/video1.mp4'
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import videoPoster from "../../assets/images/video-poster.png"
 
 const PostCard = ({type}) => {
 
@@ -86,7 +87,7 @@ const PostCard = ({type}) => {
       </h2>
       {/* Media Section */}
       <div className='relative mt-4 media'>
-        <video className='w-full h-[392px] custom-2xl:h-[300px] custom-xl:h-[300px] custom-sm:h-[300px] custom-xs:h-[250px] rounded-[10px] object-cover' ref={videoRef} controls={isPlaying} playsInline preload="metadata" muted >
+        <video className='w-full h-[392px] custom-2xl:h-[300px] custom-xl:h-[300px] custom-sm:h-[300px] custom-xs:h-[250px] rounded-[10px] object-cover' ref={videoRef} controls={isPlaying} playsInline preload="metadata" muted poster={videoPoster} >
             <source src={postVideo} />
         </video>
         <button className={`absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[40px] text-sidebarIconColor duration-100 ease-in-out ${isPlaying ? 'opacity-0' : 'opacity-100'}`} onClick={togglePlayPause}>
