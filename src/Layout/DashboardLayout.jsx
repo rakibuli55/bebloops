@@ -1,12 +1,13 @@
 import React from 'react';
 import Navbar from '../shared/Navbar';
 import Sidebar from '../shared/Sidebar';
-import { Outlet } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 import AdsSidebar from '../shared/AdsSidebar';
 
 const DashboardLayout = () => {
   return (
     <div>
+      <ScrollRestoration></ScrollRestoration>
       <Navbar />
       <div>
          <div>
