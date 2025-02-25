@@ -86,7 +86,7 @@ const PostCard = ({type}) => {
       </h2>
       {/* Media Section */}
       <div className='relative mt-4 media'>
-        <video className='w-full h-[392px] custom-2xl:h-[300px] custom-xl:h-[300px] custom-sm:h-[300px] custom-xs:h-[250px] rounded-[10px] object-cover' ref={videoRef} controls={isPlaying} playsInline preload="metadata" >
+        <video className='w-full h-[392px] custom-2xl:h-[300px] custom-xl:h-[300px] custom-sm:h-[300px] custom-xs:h-[250px] rounded-[10px] object-cover' ref={videoRef} controls={isPlaying} playsInline preload="metadata" muted >
             <source src={postVideo} />
         </video>
         <button className={`absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] text-[40px] text-sidebarIconColor duration-100 ease-in-out ${isPlaying ? 'opacity-0' : 'opacity-100'}`} onClick={togglePlayPause}>
